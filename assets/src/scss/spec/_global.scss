@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   font-family: $font;
   line-height: 1.5;
-  color: $color-main;
+  color: $color-dark;
   word-wrap: break-word;
   background-color: #fff;
   min-width: 320px;
@@ -83,5 +83,45 @@ textarea {
   &:hover,
   &:focus {
     outline: none;
+  }
+}
+
+h2 {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: $color-black;
+  opacity: 0.7;
+}
+h3 {
+  font-size: 18px;
+  line-height: 1.67;
+  text-transform: uppercase;
+  color: $color-black;
+  span {
+    color: $color-green;
+  }
+}
+
+.btn {
+  position: relative;
+  display: block;
+  padding: 17px 17px 18px;
+  text-decoration: none;
+  color: #030e05;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% + 2px);
+    height: 3px;
+    background: $color-green;
   }
 }

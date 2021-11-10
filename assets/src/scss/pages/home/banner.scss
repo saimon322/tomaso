@@ -1,8 +1,24 @@
 .banner {
   &_main {
     position: relative;
-    color: #F2F1F0;
+    color: $color-white;
     text-align: center;
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner__button {
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      width: calc(100% - 24px);
+      transform: translateX(-50%);
+      color: $color-white;
+    }
     img {
       position: absolute;
       top: 0;
@@ -24,14 +40,11 @@
     text-transform: uppercase;
   }
   &__text {
-    font-size: 16px;
-    line-height: 1.5;
     letter-spacing: 0.02em;
     opacity: 0.8;
   }
   &_with_button {
     width: 100%;
-    min-height: 812px;
-
+    height: 812px;
   }
 }
