@@ -53,6 +53,7 @@
     "jquery": "^3.6.0",
     "js-accordion": "^1.0.6",
     "normalize.css": "^8.0.1",
+    "swiper": "^7.2.0",
     "webp-loader": "^0.6.0",
     "webpack-fix-style-only-entries": "^0.6.1"
   }

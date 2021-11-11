@@ -1,13 +1,12 @@
 <%=_.template(require('../templates/header.html'))({
-    title: "Tomaso",
-    menu: {}
+    title: "About Us | Tomaso",
+    menu: {about: "current-menu-item"}
 }) %>
 
 <main class="main">
     <%=_.template(require('../templates/home/banner.html'))() %>
     <%=_.template(require('../templates/home/meat_about.html'))() %>
     <%=_.template(require('../templates/home/products.html'))() %>
-    <%=_.template(require('../templates/home/where_buy.html'))() %>
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>
