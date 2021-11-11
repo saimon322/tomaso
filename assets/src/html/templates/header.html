@@ -23,54 +23,73 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-<!--    <link rel="stylesheet" href="css/swiper-bundle.min.css">-->
+    <!--    <link rel="stylesheet" href="css/swiper-bundle.min.css">-->
 </head>
 <body>
 
 <header class="header">
-    <div class="container">
-        <div class="header__content">
-            <a href="/" class="header__logo">
-                <svg width="80" height="27">
-                    <use xlink:href="#logo_text"></use>
-                </svg>
-                <svg width="65" height="30">
-                    <use xlink:href="#logo"></use>
-                </svg>
-            </a>
+    <div class="container header__content">
+        <a href="/" class="header__logo">
+            <svg width="80" height="27">
+                <use xlink:href="#logo_text"></use>
+            </svg>
+            <svg width="65" height="30">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </a>
 
-            <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li class="<%=menu.current%> menu-item-has-children">
-                        <a href="#">Про мясо</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                        </ul>
-                    </li>
-                    <li class="<%=menu.current%> menu-item-has-children">
-                        <a href="#">Про ферму</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                        </ul>
-                    </li>
-                    <li class="<%=menu.current%>">
-                        <a href="#">Партнерам</a>
-                    </li>
-                    <li class="<%=menu.current%>">
-                        <a href="#">Экскурсия на ферму</a>
-                    </li>
-                </ul>
-            </nav><!-- / .nav -->
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="<%=menu.current%> menu-item-has-children">
+                    <a href="#">
+                        Про мясо
+                        <svg width="24" height="24">
+                            <use xlink:href="#dropdown_icon"></use>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </li>
+                <li class="<%=menu.current%> menu-item-has-children">
+                    <a href="#">
+                        Про ферму
+                        <svg width="24" height="24">
+                            <use xlink:href="#dropdown_icon"></use>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </li>
+                <li class="<%=menu.current%>">
+                    <a href="#">Партнерам</a>
+                </li>
+                <li class="<%=menu.current%>">
+                    <a href="#">Экскурсия на ферму</a>
+                </li>
+            </ul>
+        </nav><!-- / .nav -->
 
-            <div class="hamburger">
-                <svg width="24" height="24">
-                    <use xlink:href="#hamburger"></use>
-                </svg>
-            </div>
+        <div class="header__lang">
+            <ul class="lang_select">
+                <li class="lang_option">Укр</li>
+                <li class="lang_option">Рус</li>
+                <li class="lang_option">Анг</li>
+            </ul>
+            <svg width="24" height="24">
+                <use xlink:href="#dropdown_icon"></use>
+            </svg>
+        </div>
+
+        <div class="hamburger">
+            <svg width="24" height="24">
+                <use xlink:href="#hamburger"></use>
+            </svg>
         </div>
     </div>
 </header><!-- / .header -->
