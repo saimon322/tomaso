@@ -1,37 +1,31 @@
 .banner {
-  &_main {
-    position: relative;
-    color: $color-white;
-    text-align: center;
-    .container {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .banner__button {
-      position: absolute;
-      left: 50%;
-      bottom: 40px;
-      width: calc(100% - 24px);
-      transform: translateX(-50%);
-      color: $color-white;
-    }
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  position: relative;
+  color: $color-white;
+  text-align: center;
+  height: 700px;
+
+  @include media-up(lg) {
+    
   }
+
+  &--big {
+    height: 812px;
+  }
+  
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__content {
 
   }
+
   &__title {
     font-family: "Lato Bold", -apple-system, system-ui, sans-serif;;
     font-size: 28px;
@@ -39,12 +33,27 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
+
   &__text {
     letter-spacing: 0.02em;
     opacity: 0.8;
   }
-  &_with_button {
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    width: calc(100% - 24px);
+    color: $color-white;
+  }
+  
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     width: 100%;
-    height: 812px;
+    height: 100%;
+    object-fit: cover;
   }
 }

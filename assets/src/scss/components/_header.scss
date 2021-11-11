@@ -4,12 +4,14 @@
   left: 0;
   width: 100%;
   z-index: 999;
+
   &__content {
     position: relative;
     height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     &:after {
       content: '';
       position: absolute;
@@ -21,14 +23,13 @@
       opacity: 0.2;
     }
   }
+
   &__logo {
     color: #fff;
+    
     &:hover {
       color: $color-green;
     }
-  }
-  &__nav {
-    display: none;
   }
 }
 

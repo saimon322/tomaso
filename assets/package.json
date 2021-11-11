@@ -52,6 +52,7 @@
     "@babel/runtime": "^7.14.0",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
+    "swiper": "^7.2.0",
     "webp-loader": "^0.6.0",
     "webpack-fix-style-only-entries": "^0.6.1"
   }
