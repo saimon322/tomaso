@@ -7,14 +7,15 @@
     url("/fonts/Lato/Lato.ttf") format("ttf"),
     url("/fonts/Lato/Lato.woff") format("woff");
 }
+
 @font-face {
   font-display: swap;
   font-style: normal;
-  font-weight: bold;
-  font-family: "Lato Bold";
-  src: url("/fonts/Lato/Lato.woff2") format("woff2"),
-    url("/fonts/Lato/Lato.ttf") format("ttf"),
-    url("/fonts/Lato/Lato.woff") format("woff");
+  font-weight: 700;
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Bold.woff2") format("woff2"),
+    url("/fonts/Lato/Lato-Bold.ttf") format("ttf"),
+    url("/fonts/Lato/Lato-Bold.woff") format("woff");
 }
 
 

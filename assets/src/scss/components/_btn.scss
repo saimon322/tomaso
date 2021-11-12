@@ -32,13 +32,26 @@
   }
 
   &--grey-borders {
+    position: relative;
     border: 1px solid rgba(3, 14, 5, 0.2);
     color: #030e05;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+      width: calc(100% + 2px);
+      height: 3px;
+      background: $color-green;
+      transition: background .25s;
+    }
   }
 
   &--blue {
-
+    
   }
+
   &--desktop {
     display: none;
 

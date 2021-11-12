@@ -1,6 +1,5 @@
 .nav {
   position: absolute;
-  z-index: -1;
   left: -12px;
   top: 0;
   width: 100vw;
@@ -83,7 +82,7 @@
         }
       }
 
-      &:hover, &.submenu-open {
+      &:hover {
         @include media-up(lg) {
           svg {
             transform: rotate(180deg);
