@@ -11,6 +11,10 @@
 
   &--green {
     background: $color-green;
+    transition: .25s;
+    &:hover {
+      background: #0b7924;
+    }
   }
 
   &--transparent {
@@ -73,15 +77,18 @@
     padding: 18px 76.5px;
   }
 
-  &:hover {
-    color: #fff;
-    background: #209C3C;
-  }
-
-  &:active {
-    background: #0b7924;
-    &:after {
-      background: #0B7924;
+  &--grey-borders,
+  &--transparent {
+    &:hover {
+      color: #fff;
+      background: #209C3C;
+    }
+  
+    &:active {
+      background: #0b7924;
+      &:after {
+        background: #0B7924;
+      }
     }
   }
 
