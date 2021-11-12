@@ -1,17 +1,14 @@
-<section class="slider slider--main-vertical">
+<section class="slider slider--main-vertical<%if (slider.reverse) {%><%=slider.reverse%><%}%>">
     <div class="container slider__container">
 
         <div class="slider__content">
             <div class="section-subtitle"><%=subtitle%></div>
             <h2 class="section-title "><%=title%></h2>
-            <div class="meat_about__text">
-                Мы проводим экскурсии на ферму и погружаем гостей в
-                тонкости и важность бизнеса, для того чтобы менять мир вместе.
-            </div>
-            <a href="#" class="btn btn--grey-borders btn--desktop">Подробнее</a>
+            <div class="meat_about__text"><%=text%></div>
+            <a href="#" class="btn btn--grey-borders btn--desktop slider__btn">Подробнее</a>
         </div>
 
-        <div class="swiper swiper-slider">
+        <div class="swiper swiper-slider swiper-container ">
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
@@ -33,10 +30,13 @@
                 </div>
 
             </div>
-            <div class="main-vertical--pagination"></div>
+            <div class="main-vertical__nav">
+                <div class="main-vertical__prev"></div>
 
-            <div class="main-vertical__prev"></div>
-            <div class="main-vertical__next"></div>
+                <div class="main-vertical__pagination"></div>
+
+                <div class="main-vertical__next"></div>
+            </div>
         </div>
 
         <a href="#" class="btn btn--grey-borders btn--mobile">Подробнее</a>
