@@ -1,4 +1,5 @@
 .btn {
+  position: relative;
   display: block;
   padding: 17px 17px 18px;
   text-decoration: none;
@@ -22,15 +23,29 @@
     &:after {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: -1px;
+      left: -1px;
       width: calc(100% + 2px);
       height: 3px;
       background: $color-green;
     }
   }
 
+  &--grey-borders {
+    border: 1px solid rgba(3, 14, 5, 0.2);
+  }
+
+  &--green {
+
+  }
+
   &--blue {
 
   }
+
+  @include media-up(lg) {
+    width: fit-content;
+    padding: 18px 76.5px;
+  }
+
 }

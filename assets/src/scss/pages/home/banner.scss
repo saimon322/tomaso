@@ -4,14 +4,13 @@
   text-align: center;
   height: 700px;
 
-  @include media-up(lg) {
-
-  }
-
   &--big {
     height: 812px;
+    @include media-up(lg) {
+      height: 849px;
+    }
   }
-
+  
 
   &__container {
     width: 100%;
@@ -22,31 +21,42 @@
     justify-content: center;
   }
 
-  &__content {
-
-  }
-
   &__title {
-    font-family: "Lato Bold", -apple-system, system-ui, sans-serif;;
+    font-family: "Lato Bold", -apple-system, system-ui, sans-serif;
     font-size: 28px;
     line-height: 1.43;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    @include media-up(lg) {
+      max-width: 800px;
+      font-size: 45px;
+      line-height: 66px;
+    }
   }
 
   &__text {
     letter-spacing: 0.02em;
     opacity: 0.8;
+    @include media-up(md) {
+      margin-top: 10px;
+      font-size: 17px;
+      line-height: 28px;
+    }
   }
 
   &__button {
     position: absolute;
-    left: 50%;
     bottom: 40px;
-    transform: translateX(-50%);
     width: calc(100% - 24px);
+    color: $color-white;
+    @include media-up(lg) {
+      width: auto;
+      position: relative;
+      bottom: 0;
+      margin-top: 40px;
+    }
   }
-
+  
   &__bg {
     position: absolute;
     top: 0;
