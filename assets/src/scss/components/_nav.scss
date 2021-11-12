@@ -1,4 +1,5 @@
 .nav {
+  display: none;
   position: absolute;
   z-index: -1;
   left: 0;
@@ -36,16 +37,16 @@
 
   &__list {
     & > li {
-      
+
 
       &.current-menu-item {
-        
+
       }
 
       &:hover, &.submenu-open {
         ul {
 
-          
+
         }
       }
 
@@ -53,7 +54,7 @@
         display: none;
 
         @include media-up(lg) {
-          
+
         }
 
         & > li {
