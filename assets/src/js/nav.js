@@ -4,25 +4,36 @@ const mainNavInit = () => {
     const $nav = document.querySelector(".header__nav");
 
     const menuClass = 'show-menu';
-    const items = $nav.querySelectorAll(".nav__list > li")
+    const items = $nav.querySelectorAll(".nav__list > li");
 
     for (const item of items) {
         const $submenu = item.querySelector("ul")
 
         if($submenu) {
             item.addEventListener("click", (e) => {
-                item.classList.toggle("submenu-open")
+                item.classList.toggle("submenu-open");
+                console.log(item);
+                let submenuItem = item.querySelector("ul");
+                if (item.classList.contains("submenu-open")) {
+                    submenuItem.style.maxHeight = 500 + 'px';
+                } else {
+                    submenuItem.style.maxHeight = 0 + 'px';
+                }
             })
         }
     }
+
+
 
     // Menu buttons
     $navButton.addEventListener('click', () => {
         $header.classList.toggle(menuClass);
         if ($header.classList.contains(menuClass)) {
             bodyFixPosition();
+            $navButton.querySelector("use").setAttribute('xlink:href', '#close')
         } else {
             bodyUnfixPosition();
+            $navButton.querySelector("use").setAttribute('xlink:href', '#close')
         }
     });
 
