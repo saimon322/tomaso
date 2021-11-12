@@ -1,38 +1,46 @@
-<section class="slider">
-    <div class="container">
+<section class="slider slider--main-vertical">
+    <div class="container slider__container">
 
         <div class="slider__content">
             <div class="section-subtitle"><%=subtitle%></div>
             <h2 class="section-title "><%=title%></h2>
+            <div class="meat_about__text">
+                Мы проводим экскурсии на ферму и погружаем гостей в
+                тонкости и важность бизнеса, для того чтобы менять мир вместе.
+            </div>
+            <a href="#" class="btn btn--grey-borders btn--desktop">Подробнее</a>
         </div>
 
-        <div class="slider__content">
-            <div class="swiper slider__main-vertical">
-                <div class="swiper-wrapper">
+        <div class="swiper swiper-slider">
+            <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="slide_image">
-                            <img src="<%=slider.image_link_1%>" alt="">
-                        </div>
+                <div class="swiper-slide">
+                    <div class="slide_image">
+                        <img src="<%=slider.image_link_1%>" alt="">
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="slide_image">
-                            <img src="<%=slider.image_link_2%>" alt="">
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slide_image">
-                            <img src="<%=slider.image_link_3%>" alt="">
-                        </div>
-                    </div>
-
                 </div>
-                <div class="main-vertical--pagination"></div>
+
+                <div class="swiper-slide">
+                    <div class="slide_image">
+                        <img src="<%=slider.image_link_2%>" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="slide_image">
+                        <img src="<%=slider.image_link_3%>" alt="">
+                    </div>
+                </div>
 
             </div>
+            <div class="main-vertical--pagination"></div>
+
+            <div class="main-vertical__prev"></div>
+            <div class="main-vertical__next"></div>
         </div>
+
+        <a href="#" class="btn btn--grey-borders btn--mobile">Подробнее</a>
+
     </div>
 
 
