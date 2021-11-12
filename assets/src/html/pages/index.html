@@ -8,7 +8,13 @@
     <%=_.template(require('../templates/home/meat_about.html'))() %>
     <%=_.template(require('../templates/home/products.html'))() %>
     <%=_.template(require('../templates/home/where_buy.html'))() %>
-    <%=_.template(require('../templates/home/bottom_banner.html'))() %>
+    <%=_.template(require('../templates/home/bottom_banner.html'))({
+        title: "БРЕНД Tomaso <span>О БУДУЩЕМ</span> И НОВЫХ СТАНДАРТАХ КАЧЕСТВА",
+        subtitle: "Мы не копируем чьи-то технологии, а создаем свои передовые ",
+        btn_text: "Стать партнером",
+        image_link: "/img/base/bottom-banner--bg-1.jpg",
+    }) %>
+
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>

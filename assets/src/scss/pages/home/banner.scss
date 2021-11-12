@@ -5,13 +5,13 @@
   height: 700px;
 
   @include media-up(lg) {
-    
+
   }
 
   &--big {
     height: 812px;
   }
-  
+
 
   &__container {
     width: 100%;
@@ -43,10 +43,10 @@
     position: absolute;
     left: 50%;
     bottom: 40px;
+    transform: translateX(-50%);
     width: calc(100% - 24px);
-    color: $color-white;
   }
-  
+
   &__bg {
     position: absolute;
     top: 0;
