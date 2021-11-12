@@ -1,24 +1,74 @@
 .meat_about {
   margin-top: 30px;
   margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    padding-top: 18px;
+    margin-left: 98px;
+    @include media-down(lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    width: 540px;
+    height: 642px;
+    object-fit: cover;
+    @include media-down(lg) {
+      display: none;
+    }
+  }
+
+  &__header {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  &__subheader {
+    margin-top: 10px;
+    @include media-up(lg) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
   &__text {
     letter-spacing: 0.02em;
     margin: 10px 0;
-   }
+    @include media-up(lg) {
+      margin: 20px 0;
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+
   &__list {
     margin: 30px 0;
+
     li {
       padding: 20px 0;
       border-bottom: 0.5px solid rgba(3, 14, 5, 0.2);
       &:first-child {
         border-top: 0.5px solid rgba(3, 14, 5, 0.2);
       }
+
       span {
         color: $color-green;
         margin-right: 10px;
       }
+
+      @include media-up(lg) {
+        padding: 26px 0;
+      }
     }
+
   }
+
   .btn {
     margin-top: 50px;
   }
