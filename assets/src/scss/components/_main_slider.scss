@@ -1,0 +1,41 @@
+.swiper {
+  width: calc(100% + 30px);
+  //height: 320px;
+  margin: 30px -15px;
+
+  &__main-vertical {
+
+  }
+
+  &-wrapper {
+    //height: 290px;
+  }
+
+  &-slide {
+    height: 100%;
+    width: calc(100% - 80px);
+    .slide_image {
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .main-vertical--pagination {
+    text-align: center;
+    margin-top: 10px;
+
+    .swiper-pagination-bullet {
+      background: $color-green;
+      opacity: .4;
+      transition: opacity .3s;
+      margin-right: 22px;
+
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
