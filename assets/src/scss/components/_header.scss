@@ -21,15 +21,49 @@
       height: 0.5px;
       background: $color-white;
       opacity: 0.2;
+      @include media-up(lg) {
+        top: 109px;
+        width: 100vw;
+        left: calc((100vw - 100%) / 2 * -1);
+      }
+    }
+
+    .hamburger svg {
+      color: #fff;
+    }
+
+    @include media-up(lg) {
+      height: 106px;
     }
   }
 
   &__logo {
     color: #fff;
+    transition: color .25s;
     
     &:hover {
       color: $color-green;
     }
+
+    @include media-up(lg) {
+
+      padding: 33px 61px 31px 69px;
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+      svg:first-child {
+        width: 121px;
+        height: 30px;
+        margin-right: 73px;
+        margin-bottom: 4px;
+      }
+
+      svg:last-child {
+        width: 88px;
+        height: 41px;
+      }
+    }
+
   }
 }
 

@@ -1,32 +1,46 @@
 .btn {
-  position: relative;
   display: block;
   padding: 17px 17px 18px;
   text-decoration: none;
-  color: #030e05;
+  color: $color-white;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 0;
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: calc(100% + 2px);
-    height: 3px;
+  &--green {
     background: $color-green;
   }
 
-  &--green {
+  &--transparent {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 0;
+    background: transparent;
 
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+      width: calc(100% + 2px);
+      height: 3px;
+      background: $color-green;
+    }
+  }
+
+  &--grey-borders {
+    border: 1px solid rgba(3, 14, 5, 0.2);
+    color: #030e05;
   }
 
   &--blue {
-    
+
   }
+
+  @include media-up(lg) {
+    width: fit-content;
+    padding: 18px 76.5px;
+  }
+
 }
