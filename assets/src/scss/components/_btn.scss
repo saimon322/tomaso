@@ -39,6 +39,21 @@
   &--blue {
 
   }
+  &--desktop {
+    display: none;
+
+    @include media-up(md) {
+      display: block;
+    }
+
+  }
+  &--mobile {
+    display: block;
+
+    @include media-up(md) {
+      display: none;
+    }
+  }
 
   @include media-up(lg) {
     width: fit-content;

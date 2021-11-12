@@ -1,0 +1,25 @@
+.bottom-banner {
+  &__content {
+    padding-top: 90px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    @include media-up(lg) {
+      font-size: 45px;
+      line-height: 1.47;
+    }
+  }
+  &__subtitle {
+    @include media-up(lg) {
+      font-size: 20px;
+    }
+  }
+  .banner__button {
+    @include media-up(lg) {
+      display: inline-block;
+    }
+  }
+}
