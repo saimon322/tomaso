@@ -7,16 +7,15 @@ const mainNavInit = () => {
     const items = $nav.querySelectorAll(".nav__list > li");
 
     for (const item of items) {
+        const $submenu = item.querySelector("ul")
 
-        const submenu = item.querySelector("ul")
-
-        if(submenu) {
+        if($submenu) {
             item.addEventListener("click", (e) => {
-                console.log('ok');
                 item.classList.toggle("submenu-open");
+                console.log(item);
                 let submenuItem = item.querySelector("ul");
                 if (item.classList.contains("submenu-open")) {
-                    submenuItem.style.maxHeight = 1000 + 'px';
+                    submenuItem.style.maxHeight = 500 + 'px';
                 } else {
                     submenuItem.style.maxHeight = 0 + 'px';
                 }
@@ -34,7 +33,7 @@ const mainNavInit = () => {
             $navButton.querySelector("use").setAttribute('xlink:href', '#close')
         } else {
             bodyUnfixPosition();
-            $navButton.querySelector("use").setAttribute('xlink:href', '#hamburger')
+            $navButton.querySelector("use").setAttribute('xlink:href', '#close')
         }
     });
 

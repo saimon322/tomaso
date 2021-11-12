@@ -39,6 +39,7 @@
 
   &__logo {
     color: #fff;
+    transition: color .25s;
     
     &:hover {
       color: $color-green;

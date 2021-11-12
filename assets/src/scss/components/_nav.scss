@@ -83,13 +83,11 @@
         }
       }
 
-      &.current-menu-item {
-        
-      }
-
       &:hover, &.submenu-open {
-        ul {
-          
+        @include media-up(lg) {
+          svg {
+            transform: rotate(180deg);
+          }
         }
       }
       
@@ -108,7 +106,7 @@
         overflow: hidden;
 
         @include media-up(lg) {
-          
+          max-height: auto;
         }
 
         & > li {

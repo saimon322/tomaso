@@ -51,6 +51,9 @@
     color: $color-white;
     @include media-up(lg) {
       width: auto;
+      position: relative;
+      bottom: 0;
+      margin-top: 40px;
     }
   }
   
