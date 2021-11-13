@@ -7,7 +7,7 @@
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  transition: background .25s, color .25s;
+  transition: background .25s, color .25s, border-color .25s;
 
   &--green {
     background: $color-green;
@@ -82,12 +82,15 @@
     &:hover {
       color: #fff;
       background: #209C3C;
+      border-color: #209C3C;
     }
   
     &:active {
       background: #0b7924;
+      border-color: #0b7924;
       &:after {
         background: #0B7924;
+        border-color: #0B7924;
       }
     }
   }
