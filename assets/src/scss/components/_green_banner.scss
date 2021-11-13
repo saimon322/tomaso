@@ -1,0 +1,19 @@
+.green_banner {
+    padding: 40px 12px;
+    color: #fff;
+    background-color: #209C3C;
+    background-image: url('../../img/icons/lines_bg--white.svg');
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 66px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    @include media-up(lg) {
+        padding: 107px 0 100px 0;
+    }
+}
