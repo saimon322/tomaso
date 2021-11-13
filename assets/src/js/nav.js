@@ -33,7 +33,7 @@ const mainNavInit = () => {
             $navButton.querySelector("use").setAttribute('xlink:href', '#close')
         } else {
             bodyUnfixPosition();
-            $navButton.querySelector("use").setAttribute('xlink:href', '#close')
+            $navButton.querySelector("use").setAttribute('xlink:href', '#hamburger')
         }
     });
 
