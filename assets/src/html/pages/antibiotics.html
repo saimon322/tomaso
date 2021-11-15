@@ -1,0 +1,25 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "About Us | Tomaso",
+    menu: {about: "current-menu-item"}
+}) %>
+
+<main>
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "",
+        title: "Свиноводство без антибиотиков",
+        text: "Новый стандарт качества",
+        buttonClass: "btn--disable",
+        buttonText: "",
+    }) %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+        contentClass: "",
+        subtitle: "Без антибиотиков",
+        title: "С 2011 года мы в Tomaso ежегодно выращиваем поголовье в 5000 особей, из&nbsp;них <span>менее 2%</span> болеют и получают антибиотики",
+        "text": "В среднем мы используем в 500 раз меньше антибиотиков, чем другие производства в Европе. Своим примером мы доказываем, что свинина без антибиотиков — это вкусное, качественное и безопасное мясо.",
+        "img": "/img/base/antibiotics_about.jpg",
+    }) %>
+
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>
