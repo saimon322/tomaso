@@ -1,13 +1,15 @@
 import Swiper from 'swiper/swiper-bundle.min.js';
 
 
-const startupsSlider = document.querySelector('.slider--main-vertical .swiper-slider');
+const startupsSliderTop = document.querySelector('.slider--main-vertical-top .swiper-slider');
+const startupsSliderMiddle = document.querySelector('.slider--main-vertical-middle .swiper-slider');
+const startupsSliderBottom = document.querySelector('.slider--main-vertical-bottom .swiper-slider');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
 let step = 0;
 
-if (startupsSlider) {
-    const startups = new Swiper(startupsSlider, {
+function optionsFunc(sliderPref) {
+    let optionsParams = {
         loop: true,
         speed: 500,
         direction: 'vertical',
@@ -16,15 +18,15 @@ if (startupsSlider) {
         autoHeight: true,
 
         pagination: {
-            el: '.main-vertical__pagination',
+            el: '.main-vertical-'+sliderPref+'__pagination',
             clickable: true,
             renderBullet: function (index, className) {
                 return '<span class="' + className + '"></span>';
             },
         },
         navigation: {
-            nextEl: '.main-vertical__next',
-            prevEl: '.main-vertical__prev',
+            nextEl: '.main-vertical-'+sliderPref+'__next',
+            prevEl: '.main-vertical-'+sliderPref+'__prev',
         },
         breakpoints: {
             0: {
@@ -39,7 +41,25 @@ if (startupsSlider) {
                 direction: 'vertical',
             }
         },
-    });
+    };
+
+    return optionsParams;
+}
+
+if (startupsSliderTop) {
+    const startupsTop = new Swiper(startupsSliderTop, optionsFunc('top'));
+}
+if (startupsSliderMiddle) {
+    const startupsMiddle = new Swiper(startupsSliderMiddle, optionsFunc('middle'));
+}
+if (startupsSliderBottom) {
+    const startupsBottom = new Swiper(startupsSliderBottom, optionsFunc('bottom'));
+}
+
+// if (startupsSlider) {
+    // const startupsTop = new Swiper(startupsSlider, optionsFunc('top'));
+    // const startupsMiddle = new Swiper(startupsSlider, optionsFunc('middle'));
+    // const startupsBottom = new Swiper(startupsSlider, optionsFunc('bottom'));
 
     // const checkStartupsBulletsMobile = (bp) => {
     //     startups.on('slideChange', swiper => {
@@ -66,5 +86,5 @@ if (startupsSlider) {
     //
     // checkStartupsBulletsMobile(bp576);
     // bp576.onchange = checkStartupsBulletsMobile;
-}
+// }
 
