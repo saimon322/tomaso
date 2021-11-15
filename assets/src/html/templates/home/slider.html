@@ -1,4 +1,4 @@
-<section class="slider slider--main-vertical<%if (slider.reverse) {%><%=slider.reverse%><%}%>">
+<section class="slider slider--main-vertical slider--main-vertical-<%=slider.classPref%><%if (slider.reverse) {%><%=slider.reverse%><%}%>">
     <div class="container slider__container">
 
         <div class="slider__content">
@@ -31,11 +31,11 @@
 
             </div>
             <div class="main-vertical__nav">
-                <div class="main-vertical__prev"></div>
+                <div class="main-vertical__prev main-vertical-<%=slider.classPref%>__prev"></div>
 
-                <div class="main-vertical__pagination"></div>
+                <div class="main-vertical__pagination main-vertical-<%=slider.classPref%>__pagination"></div>
 
-                <div class="main-vertical__next"></div>
+                <div class="main-vertical__next main-vertical-<%=slider.classPref%>__next"></div>
             </div>
         </div>
 
