@@ -50,13 +50,14 @@ function optionsFunc(sliderPref) {
 if (vertSliderTop) {
     const vertTop = new Swiper(vertSliderTop, optionsFunc('top'));
 }
+
 if (vertSliderMiddle) {
     const vertMiddle = new Swiper(vertSliderMiddle, optionsFunc('middle'));
 }
+
 if (vertSliderBottom) {
     const vertBottom = new Swiper(vertSliderBottom, optionsFunc('bottom'));
 }
-
 
 if (meatSlider) {
     const meats = new Swiper (meatSlider, {
