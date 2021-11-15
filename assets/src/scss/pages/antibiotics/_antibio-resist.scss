@@ -1,0 +1,27 @@
+.antibio-resist {
+    background: $color-white;
+    margin-top: 0;
+
+    &__wrapper {
+        @include media-up(lg) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 95px;
+        }
+    }
+
+    &__content {
+        @include media-up(lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 554px;
+            margin-left: 0;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 780px;
+    }
+}

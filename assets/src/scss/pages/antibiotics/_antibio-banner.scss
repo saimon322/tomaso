@@ -1,0 +1,30 @@
+.antibio-banner {
+    background-color: $color-white;
+    background-image: url('/img/icons/lines_bg.svg');
+
+    &__wrapper {
+        padding-top: 20px;
+        padding-bottom: 30px;
+
+        @include media-up(lg) {
+            padding-top: 64px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px;
+        text-align: center;
+    }
+}

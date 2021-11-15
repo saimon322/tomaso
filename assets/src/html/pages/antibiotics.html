@@ -1,0 +1,57 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "About Us | Tomaso",
+    menu: {about: "current-menu-item"}
+}) %>
+
+<main>
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "",
+        title: "Свиноводство без антибиотиков",
+        text: "Новый стандарт качества",
+        buttonClass: "btn--disable",
+        buttonText: "",
+    }) %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+        contentClass: "",
+        subtitle: "Без антибиотиков",
+        title: "С 2011 года мы в Tomaso ежегодно выращиваем поголовье в 5000 особей, из&nbsp;них <span>менее 2%</span> болеют и получают антибиотики",
+        "text": "В среднем мы используем в 500 раз меньше антибиотиков, чем другие производства в Европе. Своим примером мы доказываем, что свинина без антибиотиков — это вкусное, качественное и безопасное мясо.",
+        "img": "/img/base/antibiotics_about.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/antibiotics/why.html'))() %>
+
+    <%=_.template(require('../templates/antibiotics/antibio-slider.html'))({
+        contentClass: "about--slider__content--center",
+        subtitle: {
+            slide_one: "<span>01.</span>",
+            slide_two: "<span>02.</span>",
+            slide_three: "<span>03.</span>",
+        },
+        title: {
+            slide_one: "Появление антибиотиков <span>считается чудом</span> медицины и одним из важнейших открытий прошлого столетия",
+            slide_two: "<span>Забота</span> о животных",
+            slide_three: "Без гормонов, без стресса, <span>без антибиотиков</span>",
+        },
+        "text": {
+            slide_one: "Благодаря их созданию человечество научилось борьбе с вирусами, победило множество болезней и значительно увеличило продолжительность жизни.",
+            slide_two: "Антибиотики попадают в наш организм намеренно — при лечении и  неосознанно — через еду и воду.",
+            slide_three: "В последние годы это стало приобретать катастрофический характер. Развитие резистентности у человека может иметь сильное влияние на здоровье, продолжительность жизни и возможность справляться с теми болезнями, которые уже когда-то были побеждены.",
+        },
+        "img": {
+            slide_one: "/img/base/antibio_image-one.jpg",
+            slide_two: "/img/base/antibio_image-two.jpg",
+            slide_three: "/img/base/antibio_image-three.jpg",
+        },
+    }) %>
+
+    <%=_.template(require('../templates/antibiotics/damage.html'))() %>
+
+    <%=_.template(require('../templates/antibiotics/antibio-banner.html'))() %>
+
+    <%=_.template(require('../templates/antibiotics/antibio-resist.html'))() %>
+
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>
