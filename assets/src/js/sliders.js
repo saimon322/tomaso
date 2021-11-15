@@ -1,10 +1,9 @@
 import Swiper from 'swiper/swiper-bundle.min.js';
 
 
-const startupsSliderTop = document.querySelector('.slider--main-vertical-top .swiper-slider');
-const startupsSliderMiddle = document.querySelector('.slider--main-vertical-middle .swiper-slider');
-const startupsSliderBottom = document.querySelector('.slider--main-vertical-bottom .swiper-slider');
-const startupsSlider = document.querySelector('.slider--main-vertical .swiper-slider');
+const vertSliderTop = document.querySelector('.slider--main-vertical-top .swiper-slider');
+const vertSliderMiddle = document.querySelector('.slider--main-vertical-middle .swiper-slider');
+const vertSliderBottom = document.querySelector('.slider--main-vertical-bottom .swiper-slider');
 const meatSlider = document.querySelector('.products_slider');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
@@ -48,47 +47,16 @@ function optionsFunc(sliderPref) {
     return optionsParams;
 }
 
-if (startupsSliderTop) {
-    const startupsTop = new Swiper(startupsSliderTop, optionsFunc('top'));
+if (vertSliderTop) {
+    const vertTop = new Swiper(vertSliderTop, optionsFunc('top'));
 }
-if (startupsSliderMiddle) {
-    const startupsMiddle = new Swiper(startupsSliderMiddle, optionsFunc('middle'));
+if (vertSliderMiddle) {
+    const vertMiddle = new Swiper(vertSliderMiddle, optionsFunc('middle'));
 }
-if (startupsSliderBottom) {
-    const startupsBottom = new Swiper(startupsSliderBottom, optionsFunc('bottom'));
+if (vertSliderBottom) {
+    const vertBottom = new Swiper(vertSliderBottom, optionsFunc('bottom'));
 }
 
-// if (startupsSlider) {
-    // const startupsTop = new Swiper(startupsSlider, optionsFunc('top'));
-    // const startupsMiddle = new Swiper(startupsSlider, optionsFunc('middle'));
-    // const startupsBottom = new Swiper(startupsSlider, optionsFunc('bottom'));
-
-    // const checkStartupsBulletsMobile = (bp) => {
-    //     startups.on('slideChange', swiper => {
-    //         if (!bp.matches) {
-    //             const currentStep = 46;
-    //             const active = swiper.activeIndex;
-    //             const prev = swiper.previousIndex;
-    //             const directionRight = active > prev;
-    //
-    //             if (directionRight && active > 1) {
-    //                 step = -prev * currentStep;
-    //                 startupsPagination.style.transform = 'translateX(' + step + 'px)';
-    //             }
-    //
-    //             if (!directionRight && active > 0) {
-    //                 step = (active - 1 === 0) ? 0 : -(active - 1) * currentStep;
-    //                 startupsPagination.style.transform = 'translateX(' + step + 'px)';
-    //             }
-    //         } else {
-    //             startupsPagination.hasAttribute('style') && startupsPagination.removeAttribute('style');
-    //         }
-    //     });
-    // }
-    //
-    // checkStartupsBulletsMobile(bp576);
-    // bp576.onchange = checkStartupsBulletsMobile;
-// }
 
 if (meatSlider) {
     const meats = new Swiper (meatSlider, {
