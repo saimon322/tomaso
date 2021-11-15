@@ -12,14 +12,22 @@
       line-height: 1.47;
     }
   }
+
   &__subtitle {
     @include media-up(lg) {
       font-size: 20px;
     }
   }
+
+  &__container {
+    height: 100%;
+  }
+
   .banner__button {
+    bottom: 40px;
     @include media-up(lg) {
       display: inline-block;
+      bottom: 0;
     }
   }
 }

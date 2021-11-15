@@ -1,64 +1,38 @@
-.about {
-    &_wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 30px;
+.culture {
 
+    &__wrapper {
         @include media-up(lg) {
-            flex-direction: row;
-            margin: 105px auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: 520px 1fr;
+            gap: 71px;
         }
     }
 
-    &_image {
-        margin-top: 20px;
-        margin-left: -12px;
-        width: 100vw;
-        object-fit: cover;
-        max-width: 100vw;
-
-        @include media-up(md) {
-            margin-left: -15px;
-            margin-bottom: -15px;
-        }
-
+    &__image {
+        display: none;
         @include media-up(lg) {
-            margin: 0 98px 0 0;
-            max-width: 100%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            display: block;
         }
     }
 
-    &_content {
+    &__content {
         @include media-up(lg) {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            padding: 23px;
-        }
-
-        &--center {
             justify-content: center;
         }
     }
 
-    &_subheader {
-        display: block;
+    &__subtitle {
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
         color: $color-black;
-        width: 100%;
-
-        span {
-            color: $color-green;
-        }
     }
 
-    &_header {
+    &__title {
         margin-top: 10px;
         font-style: normal;
         font-weight: bold;
@@ -66,7 +40,7 @@
         line-height: 30px;
         text-transform: uppercase;
 
-        & > span {
+        span {
             color: $color-green;
         }
 
@@ -76,18 +50,25 @@
         }
     }
 
-    &_text {
+    &__text {
         margin-top: 10px;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        letter-spacing: 0.02em;
-        color: $color-dark;
-
+        
         @include media-up(lg) {
+            margin-top: 20px;
             font-size: 17px;
             line-height: 28px;
         }
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+
+    @include media-up(lg) {
+        background: $color-white;
     }
 }

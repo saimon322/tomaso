@@ -11,20 +11,51 @@
         buttonClass: "btn--transparent btn--disable",
         buttonText: "",
     }) %>
+
     <%=_.template(require('../templates/components/about.html'))({
+        contentClass: "",
         subtitle: "О мясе",
         title: "Tomaso — <span>бренд натуральной свинины</span>, произведенной в самом центре Украины",
         "text": "Мы занимаемся разведением свиней с чистой австрийской генетикой. Наши стада выращены на натуральном корме и чистой воде по австрийским стандартам качества и технологиям. Донести особенный вкус натурального мяса без антибиотиков и его пользу для здоровья человека — наша миссия",
-        "img": "../../img/base/about_image.jpg",
+        "img": "/img/base/about_image.jpg",
     }) %>
+
     <%=_.template(require('../templates/components/green_banner.html'))({
         sectionClass: "green--with-circle green--with-btm-h green--small-padding",
         topSubtitle: "",
         title: "Натуральное мясо без&nbsp;антибиотиков",
         bottomSubtitle: "Почему нам доверяют",
     }) %>
-    <%=_.template(require('../templates/home/meat_about.html'))() %>
-    <%=_.template(require('../templates/home/products.html'))() %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+        contentClass: "about_content--center",
+        subtitle: "<span>01</span>",
+        title: "Регулярные <span>проверки качества</span>",
+        "text": "Предприятие ТОВ «Агро Плюс 2006» является членом австрийской свиноводческой ассоциации. Там каждые 2 года нам подбирают новых кнуров и свиней с правильной генетикой для улучшения вкусовых качеств мяса. Также мы регулярно проверяем свиноматок и подаем аналитические данные в единую базу ассоциации, где контролируют здоровье и качество мяса.",
+        "img": "/img/base/about_check-image.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/home/products.html'))({
+        slidesWeb: "4",
+    }) %>
+
+    <%=_.template(require('../templates/components/green_banner.html'))({
+        sectionClass: "green--small-padding",
+        topSubtitle: "",
+        title: "В 2 раза дороже на полке<br>В 100 раз выгоднее для жизни",
+        bottomSubtitle: "",
+    }) %>
+
+    <%=_.template(require('../templates/home/where_buy.html'))() %>
+
+    <%=_.template(require('../templates/about/culture.html'))() %>
+
+    <%=_.template(require('../templates/home/bottom_banner.html'))({
+        title: "БРЕНД Tomaso <span>О БУДУЩЕМ</span> И НОВЫХ СТАНДАРТАХ КАЧЕСТВА",
+        subtitle: "Мы не копируем чьи-то технологии, а создаем свои передовые ",
+        btn_text: "Стать партнером",
+        image_link: "/img/base/bottom-banner--bg-1.jpg",
+    }) %>
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>

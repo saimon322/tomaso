@@ -70,6 +70,7 @@ if (startupsSlider) {
 }
 
 if (meatSlider) {
+    const slidesWeb = meatSlider.dataset.slidesweb;
     const meats = new Swiper (meatSlider, {
         loop: true,
         slidesPerView: 'auto',
@@ -84,7 +85,7 @@ if (meatSlider) {
                 slidesPerView: 4
             },
             1440: {
-                slidesPerView: 6,
+                slidesPerView: slidesWeb,
             }
         },
 

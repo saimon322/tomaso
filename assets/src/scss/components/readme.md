@@ -25,6 +25,9 @@ ___
 ## about
 блок с картинкой слева и текстом справа
 
+**contentClass**:  
+about_content--center — выравнивание контента по центру по-вертикали
+
 **subtitle** — дополнительный заголовок над основным  
 **title** — заголовок блока  
 **text** — текст блока
@@ -32,6 +35,7 @@ ___
 
 ```
 <%=_.template(require('../templates/components/about.html'))({
+        contentClass: "",
         subtitle: "",
         title: "",
         "text": "",
