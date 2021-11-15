@@ -1,0 +1,109 @@
+.products {
+    &_section {
+        position: relative;
+        padding: 49px 0 60px 0;
+        background-image: url("../img/icons/lines_bg.svg");
+        background-color: #F8F8F8;
+    }
+
+    &_marker {
+        user-select: none;
+        position: absolute;
+        top: -170px;
+        right: -172px;
+        animation: rotation 10s linear;
+        animation-iteration-count: infinite;
+        @include media-down(lg) {
+            display: none;
+        }
+    }
+
+    &_slider {
+        margin-top: 31px;
+        @include media-up(md) {
+            margin-top: 25px;
+            padding: 6px;
+            overflow: hidden;
+        }
+    }
+
+    &_item.swiper-slide {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;border-radius: 100%;
+
+        @include media-up(lg) {
+            width: 160px;
+        }
+    }
+
+    &_image {
+        border-radius: 100%;
+        transition: outline-color .25s;
+        outline: 6px;
+        outline-style: solid;
+        outline-color: transparent;
+        &:hover {
+            outline-color: #fff;
+        }
+    }
+
+    &_name {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #030E05;
+    }
+
+    &_navigation {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        bottom: 130px;
+    }
+
+    &_arrow {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+
+        &--left {
+            position: absolute;
+            left: -48px;
+
+            @include media-down(lg) {
+                display: none;
+            }
+        }
+        
+        &--right {
+            position: absolute;
+            right: -48px;
+
+            @include media-down(lg) {
+                display: none;
+            }
+        }
+
+        svg {
+            color: #030E05;
+            opacity: .5;
+            transition: opacity .25s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
