@@ -5,7 +5,8 @@ const vertSliderTop = document.querySelector('.slider--main-vertical-top .swiper
 const vertSliderMiddle = document.querySelector('.slider--main-vertical-middle .swiper-slider');
 const vertSliderBottom = document.querySelector('.slider--main-vertical-bottom .swiper-slider');
 const meatSlider = document.querySelector('.products_slider');
-const aboutSlider = document.querySelector('.about--slider__slider');
+const aboutSlider = document.querySelector('.about--slider__slider')
+const antibioSlider = document.querySelector('.antibio-slider__swiper');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
 let step = 0;
@@ -114,5 +115,36 @@ if (aboutSlider) {
                 },
             },
         },
+    });
+}
+
+if (antibioSlider) {
+    const antibiotics = new Swiper(antibioSlider, {
+
+        loop: true,
+        speed: 500,
+        slidesPerView: 1,
+        autoHeight: true,
+
+        pagination: {
+            el: '.antibio-slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">0' + ++index + '</span>';
+            },
+        },
+
+        breakpoints: {
+            1024: {
+                pagination: false,
+                autoplay: {
+                    enabled: true,
+                    delay: 10000,
+                    disableOnInteraction: false,
+                },
+                grabCursor: true,
+            },
+        },
+
     });
 }
