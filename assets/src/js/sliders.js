@@ -3,6 +3,7 @@ import Swiper from 'swiper/swiper-bundle.min.js';
 
 const startupsSlider = document.querySelector('.slider--main-vertical .swiper-slider');
 const meatSlider = document.querySelector('.products_slider');
+const aboutSlider = document.querySelector('.about--slider__slider');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
 let step = 0;
@@ -94,4 +95,32 @@ if (meatSlider) {
             prevEl: '.products_arrow--left',
         },
     })
+}
+
+if (aboutSlider) {
+    const abouts = new Swiper(aboutSlider, {
+        loop: true,
+        speed: 500,
+        slidesPerView: 'auto',
+
+        pagination: {
+            el: '.about--slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">0' + ++index + '</span>';
+            },
+        },
+
+        breakpoints: {
+            1024: {
+                centeredSlides: true,
+                pagination: false,
+                autoplay: {
+                    enabled: true,
+                    delay: 10000,
+                    disableOnInteraction: false,
+                },
+            },
+        },
+    });
 }
