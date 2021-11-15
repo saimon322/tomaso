@@ -17,7 +17,7 @@ function optionsFunc(sliderPref) {
         direction: 'vertical',
         slidesPerView: 'auto',
         centeredSlides: true,
-        autoHeight: true,
+        // autoHeight: true,
 
         pagination: {
             el: '.main-vertical-'+sliderPref+'__pagination',
@@ -43,7 +43,9 @@ function optionsFunc(sliderPref) {
                 direction: 'vertical',
             }
         },
+
     };
+
 
     return optionsParams;
 }
