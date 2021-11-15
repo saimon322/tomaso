@@ -9,6 +9,10 @@
   letter-spacing: 0.02em;
   transition: background .25s, color .25s, border-color .25s;
 
+  &--disable {
+    display: none;
+  }
+
   &--green {
     background: $color-green;
     transition: .25s;

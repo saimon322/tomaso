@@ -1,8 +1,21 @@
 .products {
     &_section {
+        position: relative;
         padding: 49px 0 60px 0;
         background-image: url("../img/icons/lines_bg.svg");
         background-color: #F8F8F8;
+    }
+
+    &_marker {
+        user-select: none;
+        position: absolute;
+        top: -170px;
+        right: -172px;
+        animation: rotation 10s linear;
+        animation-iteration-count: infinite;
+        @include media-down(lg) {
+            display: none;
+        }
     }
 
     &_slider {
@@ -83,5 +96,14 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

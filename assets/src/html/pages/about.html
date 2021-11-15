@@ -4,7 +4,13 @@
 }) %>
 
 <main class="main">
-    <%=_.template(require('../templates/home/banner.html'))() %>
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "",
+        title: "Вкус мяса, который вас удивит",
+        text: "Производство закрытого цикла — гарантия качества",
+        buttonClass: "btn--transparent btn--disable",
+        buttonText: "",
+    }) %>
     <%=_.template(require('../templates/home/meat_about.html'))() %>
     <%=_.template(require('../templates/home/products.html'))() %>
 </main>

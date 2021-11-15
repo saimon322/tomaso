@@ -4,7 +4,13 @@
 }) %>
 
 <main class="main">
-    <%=_.template(require('../templates/home/banner.html'))() %>
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "banner--big",
+        title: "Мясо без антибиотиков по&#8209настоящему",
+        text: "Стандарты качества, к которым стремится Европа",
+        buttonClass: "",
+        buttonText: "Подробнее",
+    }) %>
     <%=_.template(require('../templates/home/meat_about.html'))() %>
     <%=_.template(require('../templates/home/products.html'))() %>
     <%=_.template(require('../templates/home/where_buy.html'))() %>
