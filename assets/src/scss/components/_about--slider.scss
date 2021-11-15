@@ -1,28 +1,32 @@
-.about {
+.about--slider {
     &_wrapper {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 30px;
+        margin-top: 20px;
+        margin-bottom: 97px;
+        width: calc(100% - 30px);
 
         @include media-up(lg) {
+            transition: opacity .5s;
+            opacity: 0;
             flex-direction: row;
             margin: 105px auto;
+
+            &.swiper-slide-active {
+                opacity: 1;
+            }
         }
     }
 
     &_image {
+        display: none;
         margin-top: 20px;
-        margin-left: -12px;
-        width: 100vw;
+        width: 100%;
+        height: 228px;
         object-fit: cover;
-        max-width: 100vw;
-
-        @include media-up(md) {
-            margin-left: -15px;
-            margin-bottom: -15px;
-        }
 
         @include media-up(lg) {
+            display: block;
             margin: 0 98px 0 0;
             max-width: 100%;
             width: 100%;
@@ -31,12 +35,24 @@
         }
     }
 
-    &_content {
+    &__content-image {
+        width: 100%;
+        height: 228px;
+        object-fit: cover;
+        margin-top: 30px;
+
+        @include media-up(lg) {
+            display: none;
+        }
+    }
+
+    &__content {
         @include media-up(lg) {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 23px;
+            margin-left: 75px;
         }
 
         &--center {
@@ -44,8 +60,8 @@
         }
     }
 
-    &_subheader {
-        display: block;
+    &__subheader {
+        display: none;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -56,10 +72,13 @@
         span {
             color: $color-green;
         }
+
+        @include media-up(lg) {
+            display: block;
+        }
     }
 
-    &_header {
-        margin-top: 10px;
+    &__header {
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
@@ -73,10 +92,11 @@
         @include media-up(lg) {
             font-size: 28px;
             line-height: 40px;
+            margin-top: 10px;
         }
     }
 
-    &_text {
+    &__text {
         margin-top: 10px;
         font-style: normal;
         font-weight: normal;
@@ -88,6 +108,31 @@
         @include media-up(lg) {
             font-size: 17px;
             line-height: 28px;
+        }
+    }
+    
+    &__pagination {
+        margin-top: 89px;
+        display: flex;
+        justify-content: space-between;
+        .swiper-pagination-bullet {
+            position: relative;
+            margin: 0 !important;
+            padding-left: 13px;
+            background: none;
+            border-radius: 0;
+            width: inherit;
+            height: auto;
+            border-bottom: 1px $color-black solid;
+
+            &-active {
+                color: $color-green;
+                border-bottom: 1px $color-green solid;
+            }
+        }
+
+        @include media-up(lg) {
+            display: none;
         }
     }
 }

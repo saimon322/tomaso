@@ -72,4 +72,8 @@
   .btn {
     margin-top: 50px;
   }
+
+  @include media-up(lg) {
+    margin-top: 105px;
+  }
 }
