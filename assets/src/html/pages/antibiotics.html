@@ -52,6 +52,15 @@
 
     <%=_.template(require('../templates/antibiotics/antibio-resist.html'))() %>
 
+    <%=_.template(require('../templates/antibiotics/antibio-texts.html'))() %>
+
+    <%=_.template(require('../templates/components/green_banner.html'))({
+        sectionClass: "green--with-top-h antibio-green",
+        topSubtitle: "По данным <span>исследований ВОЗ</span>",
+        title: "<span>в Норвегии и Швеции,</span> где менее интенсивно используют антибиотики, <span>уровень резистентности бактерий к антибиотикам ниже, чем в Южной европе</span>",
+        bottomSubtitle: "",
+}) %>
+
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>
