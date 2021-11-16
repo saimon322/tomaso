@@ -1,16 +1,16 @@
-<?php //$antibio_banner = get_field('antibio_banner');?>
-<?php //if (!empty($antibio_banner)): ?>
-<!--    <section class="antibio-banner">-->
-<!--        <div class="container antibio-banner__wrapper">-->
-<!--            --><?php //if (!empty($antibio_banner['subtitle'])): ?>
-<!--                <div class="antibio-banner__subtitle">--><?php //echo $antibio_banner['subtitle']?><!--</div>-->
-<!--            --><?php //endif; ?>
-<!--            --><?php //if (!empty($antibio_banner['title'])): ?>
-<!--                <div class="antibio-banner__title">--><?php //echo $antibio_banner['title']?><!--</div>-->
-<!--            --><?php //endif; ?>
-<!--        </div>-->
-<!--    </section>-->
-<?php //endif; ?>
+<?php $antibio_banner = get_field('antibio_banner');?>
+<?php if (!empty($antibio_banner)): ?>
+    <section class="antibio-banner">
+        <div class="container antibio-banner__wrapper">
+            <?php if (!empty($antibio_banner['subtitle'])): ?>
+                <div class="antibio-banner__subtitle"><?php echo $antibio_banner['subtitle']?></div>
+            <?php endif; ?>
+            <?php if (!empty($antibio_banner['title'])): ?>
+                <div class="antibio-banner__title"><?php echo $antibio_banner['title']?></div>
+            <?php endif; ?>
+        </div>
+    </section>
+<?php endif; ?>
 
 <section class="antibio-texts">
     <div class="antibio-texts__wrapper">

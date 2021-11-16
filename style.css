@@ -4,12 +4,3 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 */
-
-.damage__text hr {
-    border: none;
-    color: #030e05;
-    background: #030e05;
-    height: 1px;
-    opacity: .2;
-    margin: 10px 0;
-}
