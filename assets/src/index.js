@@ -2,6 +2,7 @@
 import './scss/style.scss';
 
 // Libs
+import Fancybox from '@fancyapps/ui';
 
 // Scripts
 import './js/svg-sprite';
