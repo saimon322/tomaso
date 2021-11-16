@@ -1,5 +1,5 @@
 <%=_.template(require('../templates/header.html'))({
-    title: "About Us | Tomaso",
+    title: "Antibiotics | Tomaso",
     menu: {about: "current-menu-item"}
 }) %>
 
@@ -13,6 +13,7 @@
     }) %>
 
     <%=_.template(require('../templates/components/about.html'))({
+        sectionClass: "",
         contentClass: "",
         imageClass: "",
         subtitle: "Без антибиотиков",

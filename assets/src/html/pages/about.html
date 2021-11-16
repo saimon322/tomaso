@@ -13,6 +13,7 @@
     }) %>
 
     <%=_.template(require('../templates/components/about.html'))({
+        sectionClass: "",
         contentClass: "",
         imageClass: "",
         subtitle: "О мясе",
@@ -31,6 +32,9 @@
 
     <%=_.template(require('../templates/components/about--slider.html'))({
         contentClass: "about--slider__content--center",
+        sectionClass: "farm__slider",
+        subheader: "",
+        header: "",
         subtitle: {
             slide_one: "<span>01</span>",
             slide_two: "<span>02</span>",
