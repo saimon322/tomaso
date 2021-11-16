@@ -12,7 +12,6 @@ const mainNavInit = () => {
         if($submenu) {
             item.addEventListener("click", (e) => {
                 item.classList.toggle("submenu-open");
-                console.log(item);
                 let submenuItem = item.querySelector("ul");
                 if (item.classList.contains("submenu-open")) {
                     submenuItem.style.maxHeight = 500 + 'px';
