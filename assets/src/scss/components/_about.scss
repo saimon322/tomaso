@@ -28,7 +28,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            &--reverse {
+                margin: 0 0 0 98px;
+            }
         }
+
     }
 
     &_content {
@@ -41,6 +46,10 @@
 
         &--center {
             justify-content: center;
+        }
+
+        &--reverse {
+            order: -1;
         }
     }
 
