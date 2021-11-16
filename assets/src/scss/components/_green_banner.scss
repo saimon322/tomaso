@@ -3,7 +3,7 @@
     padding: 40px 12px;
     color: #fff;
     background-color: #209C3C;
-    background-image: url('/img/icons/lines_bg--white.svg');
+    background-image: url('../img/icons/lines_bg--white.svg');
 
     & > * {
         max-width: 1200px;
@@ -12,7 +12,7 @@
     }
 
     &__top-subtitle {
-        display: none;
+        display: block;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -41,7 +41,7 @@
     }
 
     &__bottom-subtitle {
-        display: none;
+        display: block;
         margin-top: 7px;
         font-style: normal;
         font-weight: normal;
@@ -56,7 +56,7 @@
     }
 
     &__circle {
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
@@ -75,24 +75,6 @@
 
     @include media-up(lg) {
         padding: 107px 100px 100px 100px;
-    }
-
-    &--with-circle {
-        .green__circle {
-            display: flex;
-        }
-    }
-
-    &--with-top-h {
-        .green__top-subtitle {
-            display: block;
-        }
-    }
-
-    &--with-btm-h {
-        .green__bottom-subtitle {
-            display: block;
-        }
     }
 
     &--small-padding {
