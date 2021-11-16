@@ -1,0 +1,53 @@
+.excursion-slider {
+    background: $color-white;
+
+    &__subtitle {
+        margin-top: 50px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        @include media-up(lg) {
+
+        }
+    }
+    
+    &__title {
+        margin-top: 10px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        
+        @include media-up(lg) {
+
+        }
+
+        span {
+            color: $color-green;
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        &-text {
+            padding: 50px 20px;
+            position: absolute;
+            bottom: 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fff;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+}

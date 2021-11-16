@@ -1,5 +1,6 @@
 <%=_.template(require('../templates/header.html'))({
     title: "Tomaso",
+    contentClass: "",
     menu: {}
 }) %>
 
@@ -10,6 +11,7 @@
         text: "Стандарты качества, к которым стремится Европа",
         buttonClass: "btn--transparent",
         buttonText: "Подробнее",
+        background: "../img/base/home_banner.jpg",
     }) %>
 
     <%=_.template(require('../templates/home/meat_about.html'))() %>
