@@ -1,0 +1,35 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "About Us | Tomaso",
+    menu: {about: "current-menu-item"}
+}) %>
+
+<main>
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "",
+        title: "Tomaso свиноферма будущего",
+        text: "Уникальная система выращивания животных на фермах без антибиотиков, с заботой о животных и будущем планеты",
+        buttonClass: "btn--disable",
+        buttonText: "",
+    }) %>
+
+    <%=_.template(require('../templates/components/green_banner.html'))({
+        sectionClass: "",
+        topSubtitle: "Наша цель",
+        title: "создать новую культуру потребления <br>мяса и мировой стандарт качества",
+        bottomSubtitle: "",
+        greenCircle: "yep",
+    }) %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+        contentClass: "about_content--reverse",
+        imageClass: "about_image--reverse",
+        subtitle: "О мясе",
+        title: "Tomaso — <span>бренд натуральной свинины</span>, произведенной в самом центре Украины",
+        "text": "Мы занимаемся разведением свиней с чистой австрийской генетикой. Наши стада выращены на натуральном корме и чистой воде по австрийским стандартам качества и технологиям. Донести особенный вкус натурального мяса без антибиотиков и его пользу для здоровья человека — наша миссия",
+        "img": "/img/base/about_image.jpg",
+    }) %>
+
+
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>

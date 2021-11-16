@@ -68,28 +68,32 @@
     }
 
     &__text {
-        margin-top: 10px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        span {
-            border-bottom: 1px $color-dark solid;
+        p {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            span {
+                border-bottom: 1px $color-dark solid;
+            }
+        }
+
+        hr {
+            border: none;
+            color: $color-black;
+            background: $color-black;
+            height: 1px;
+            opacity: .2;
+            margin-top: 10px;
         }
 
         @include media-up(lg) {
-            font-size: 17px;
-            line-height: 28px;
+            p {
+                font-size: 17px;
+                line-height: 28px;
+            }
         }
-    }
-
-    &__line {
-        border: none;
-        color: $color-black;
-        background: $color-black;
-        height: 1px;
-        opacity: .2;
-        margin-top: 10px;
     }
 
 }
