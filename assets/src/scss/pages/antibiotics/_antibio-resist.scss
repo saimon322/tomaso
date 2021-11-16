@@ -1,8 +1,11 @@
 .antibio-resist {
     background: $color-white;
     margin-top: 0;
+    margin-bottom: 0;
 
     &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
         @include media-up(lg) {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -21,7 +24,20 @@
     }
 
     &__image {
+        display: block;
         width: 100%;
-        height: 780px;
+        height: 263px;
+        object-fit: cover;
+        margin-top: 30px;
+
+        @include media-up(md) {
+            height: 480px;
+            margin-top: 15px;
+        }
+
+        @include media-up(lg) {
+            height: 780px;
+            margin-top: 0px;
+        }
     }
 }
