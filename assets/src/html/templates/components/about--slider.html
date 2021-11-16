@@ -1,5 +1,11 @@
-<section class="about--slider">
+<section class="about--slider <%=sectionClass%>">
     <div class="swiper <%=contentClass%> about--slider__slider">
+        <%if (subheader) {%>
+            <div class="about--slider__subtitle"><%=subheader%></div>
+        <%}%>
+        <%if (header) {%>
+            <div class="about--slider__title"><%=header%></div>
+        <%}%>
         <div class="about--slider__pagination"></div>
         <div class="swiper-wrapper">
             <div class="container about--slider_wrapper swiper-slide">
