@@ -19,17 +19,27 @@
         padding-bottom: 30px;
         background: $color-white;
 
+        p {
+            display: inline;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
         @include media-up(lg) {
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             background: #fff;
-            padding-right: 80px;
+            padding-right: 100px;
 
-            span {
+            p {
                 display: block;
                 margin-bottom: 24px;
+                font-size: 17px;
+                line-height: 28px;
             }
 
             &:after {
@@ -82,12 +92,23 @@
     }
 
     &__text {
-        margin: 10px 0;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: $color-dark;
+        p {
+            margin: 15px 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-dark;
+        }
+
+        hr {
+            border: none;
+            color: $color-black;
+            background: $color-black;
+            height: 1px;
+            opacity: .2;
+            margin-top: 15px;
+        }
 
         @include media-up(lg) {
             margin-top: 0;
