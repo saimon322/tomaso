@@ -130,9 +130,12 @@ class HeaderWalker extends Walker_Nav_Menu
             $item_output .= '<a' . $attributes . '>';
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</a>';
-            
+
         }
-        
+        if (in_array('menu-item-has-children', $classes)) {
+            $item_output .= '<svg width="24" height="24"><use xlink:href="#arrow-down"></use></svg>';
+        }
+
         $item_output .= $args->after;
         
         /**
@@ -153,102 +156,4 @@ class HeaderWalker extends Walker_Nav_Menu
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
     
-    public function walk($elements, $max_depth, ...$args)
-    {
-        $output = '<nav class="header__nav nav">
-                    <div class="nav__wrapper">
-                        <ul class="nav__list">';
-        
-        // Invalid parameter or nothing to walk.
-        if ($max_depth < -1 || empty($elements)) {
-            return $output;
-        }
-        
-        $parent_field = $this->db_fields['parent'];
-        
-        // Flat display.
-        if (-1 == $max_depth) {
-            $empty_array = array();
-            foreach ($elements as $e) {
-                $this->display_element($e, $empty_array, 1, 0, $args, $output);
-            }
-            
-            return $output;
-        }
-        
-        /*
-         * Need to display in hierarchical order.
-         * Separate elements into two buckets: top level and children elements.
-         * Children_elements is two dimensional array, eg.
-         * Children_elements[10][] contains all sub-elements whose parent is 10.
-         */
-        $top_level_elements = array();
-        $children_elements  = array();
-        foreach ($elements as $e) {
-            if (empty($e->$parent_field)) {
-                $top_level_elements[] = $e;
-            } else {
-                $children_elements[$e->$parent_field][] = $e;
-            }
-        }
-        
-        /*
-         * When none of the elements is top level.
-         * Assume the first one must be root of the sub elements.
-         */
-        if (empty($top_level_elements)) {
-            
-            $first = array_slice($elements, 0, 1);
-            $root  = $first[0];
-            
-            $top_level_elements = array();
-            $children_elements  = array();
-            foreach ($elements as $e) {
-                if ($root->$parent_field == $e->$parent_field) {
-                    $top_level_elements[] = $e;
-                } else {
-                    $children_elements[$e->$parent_field][] = $e;
-                }
-            }
-        }
-        
-        foreach ($top_level_elements as $e) {
-            $this->display_element($e, $children_elements, $max_depth, 0, $args, $output);
-        }
-        
-        /*
-         * If we are displaying all levels, and remaining children_elements is not empty,
-         * then we got orphans, which should be displayed regardless.
-         */
-        if ((0 == $max_depth) && count($children_elements) > 0) {
-            $empty_array = array();
-            foreach ($children_elements as $orphans) {
-                foreach ($orphans as $op) {
-                    $this->display_element($op, $empty_array, 1, 0, $args, $output);
-                }
-            }
-        }
-        
-        $contacts = get_field('contacts', 'options');
-        
-        $output .= '</ul>';
-        $output .= '<div class="nav__footer">';
-        $output .= '    <div class="nav__contacts">';
-        if ($contacts['phone']):
-            $output .= '<a href="tel:' . $contacts['phone'] . '">' . $contacts['phone'] . '</a>';
-        endif;
-        if ($contacts['email']):
-            $output .= '<a href="mailto:' . $contacts['email'] . '">' . $contacts['email'] . '</a>';
-        endif;
-        $output .= '    </div>';
-        if ($contacts['address']):
-            $output .= '<div class="nav__address">' . $contacts['address'] . '</div>';
-        endif;
-        $output .= '</div>';
-        $output .= '<div class="nav__circle bslue-circle"></div>';
-        $output .= '</div>';
-        $output .= '</nav>';
-        
-        return $output;
-    }
 }
