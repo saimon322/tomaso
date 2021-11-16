@@ -1,5 +1,6 @@
 <%=_.template(require('../templates/header.html'))({
     title: "Antibiotics | Tomaso",
+    contentClass: "",
     menu: {about: "current-menu-item"}
 }) %>
 
@@ -10,6 +11,7 @@
         text: "Новый стандарт качества",
         buttonClass: "btn--disable",
         buttonText: "",
+        background: "../img/base/antibiotics-banner__bg.jpg",
     }) %>
 
     <%=_.template(require('../templates/components/about.html'))({

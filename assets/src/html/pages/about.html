@@ -1,5 +1,6 @@
 <%=_.template(require('../templates/header.html'))({
     title: "About Us | Tomaso",
+    contentClass: "",
     menu: {about: "current-menu-item"}
 }) %>
 
@@ -10,6 +11,7 @@
         text: "Производство закрытого цикла — гарантия качества",
         buttonClass: "btn--transparent btn--disable",
         buttonText: "",
+        background: "../img/base/meat-banner__bg.jpg",
     }) %>
 
     <%=_.template(require('../templates/components/about.html'))({

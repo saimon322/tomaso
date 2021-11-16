@@ -56,6 +56,10 @@
     }
   }
 
+  &--green-borders {
+    border: 1px solid rgba(32, 156, 60, 0.2);
+  }
+
   &--center {
     margin: auto;
   }
