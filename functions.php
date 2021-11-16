@@ -34,6 +34,7 @@ add_action('after_setup_theme', 'theme_setup');
 function enqueue_theme_style_scripts()
 {
     wp_enqueue_style('styles', get_template_directory_uri() . '/assets/dist/css/style.css', array(), _S_VERSION);
+    wp_enqueue_style('theme_styles', get_template_directory_uri() . '/style.css', array(), _S_VERSION);
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets//dist/js/app.bundle.js', array(), _S_VERSION, true);
 }
 

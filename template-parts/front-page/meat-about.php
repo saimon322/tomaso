@@ -1,4 +1,5 @@
 <?php $meat_about = get_field('meat_about');?>
+<?php if (!empty($meat_about)): ?>
 <section class="meat_about">
     <div class="container meat_about__wrapper">
         <?php if (!empty($meat_about['image'])): ?>
@@ -27,4 +28,5 @@
         </div>
     </div>
 </section>
+<?php endif; ?>
 
