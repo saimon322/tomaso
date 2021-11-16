@@ -20,6 +20,8 @@ get_header(); ?>
 
     get_template_part('template-parts/where-buy');
 
+    get_template_part('template-parts/about-page/culture');
+
     get_template_part('template-parts/bottom-banner');
     ?>
 
