@@ -18,6 +18,12 @@ get_header(); ?>
 
     get_template_part('template-parts/antibiotics/antibiotics-texts');
 
+    get_template_part('template-parts/section-green');
+
+    get_template_part('template-parts/antibiotics/antibiotics-fact');
+
+    get_template_part('template-parts/antibiotics/examination-meat');
+
     get_template_part('template-parts/bottom-banner');
     ?>
 
