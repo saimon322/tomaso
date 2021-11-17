@@ -1,5 +1,6 @@
 <%=_.template(require('../templates/header.html'))({
     title: "About Us | Tomaso",
+    contentClass: "",
     menu: {about: "current-menu-item"}
 }) %>
 
@@ -10,9 +11,11 @@
         text: "Производство закрытого цикла — гарантия качества",
         buttonClass: "btn--transparent btn--disable",
         buttonText: "",
+        background: "../img/base/meat-banner__bg.jpg",
     }) %>
 
     <%=_.template(require('../templates/components/about.html'))({
+        sectionClass: "",
         contentClass: "",
         imageClass: "",
         subtitle: "О мясе",
@@ -31,6 +34,9 @@
 
     <%=_.template(require('../templates/components/about--slider.html'))({
         contentClass: "about--slider__content--center",
+        sectionClass: "farm__slider",
+        subheader: "",
+        header: "",
         subtitle: {
             slide_one: "<span>01</span>",
             slide_two: "<span>02</span>",

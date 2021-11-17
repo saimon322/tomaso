@@ -1,0 +1,24 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "Tomaso",
+    contentClass: "header--black",
+    menu: {}
+}) %>
+
+<main class="main">
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "banner--big",
+        title: "Ферма Тимошовка",
+        text: "Единственная свиноферма в Украине, которая работает по Европейским стандартам без антибиотиков",
+        buttonClass: "btn--transparent",
+        buttonText: "Подробнее",
+        background: "../img/base/excurs-banner__bg.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/excursion/excursion-slider.html'))({
+        subtitle: "Форматы экскурсий",
+        title: "Существует <span>несколько форматов</span> экскурсионных программ"
+    }) %>
+
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>
