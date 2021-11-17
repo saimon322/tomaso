@@ -1,10 +1,13 @@
 .bottom-banner {
+  @include media-up(lg) {
+    height: 910px;
+  }
   &__container {
     height: 100%;
   }
 
   &__content {
-    padding-top: 90px;
+    padding-top: 60px;
   }
 
   &__title {
