@@ -1,45 +1,45 @@
 <?php $about_slider = get_field('about_slider');?>
-<?php if (!empty($about_slider)): ?>
-    <section class="about--slider<?php echo $about_slider['block_header'] ? ' farm__slider' : ''?>">
+<?php if ($about_slider): ?>
+    <section class="about--slider<?= $about_slider['block_header'] ? ' farm__slider' : ''?>">
         <div class="swiper about--slider__content--center about--slider__slider">
 
-            <?php if (!empty($about_slider['block_header'])): ?>
+            <?php if ($about_slider['block_header']): ?>
 
-                <?php if (!empty($about_slider['subtitle'])): ?>
-                    <div class="about--slider__subtitle"><?php echo $about_slider['subtitle']?></div>
+                <?php if ($about_slider['subtitle']): ?>
+                    <div class="about--slider__subtitle"><?= $about_slider['subtitle']?></div>
                 <?php endif; ?>
 
-                <?php if (!empty($about_slider['title'])): ?>
-                    <div class="about--slider__title"><?php echo $about_slider['title']?></div>
+                <?php if ($about_slider['title']): ?>
+                    <div class="about--slider__title"><?= $about_slider['title']?></div>
                 <?php endif; ?>
 
             <?php endif; ?>
 
-            <?php if (!empty($about_slider['slider'])): ?>
+            <?php if ($about_slider['slider']): ?>
 
                 <div class="about--slider__pagination"></div>
                 <div class="swiper-wrapper">
                     <?php foreach ($about_slider['slider'] as $key => $slide): ?>
                         <div class="container about--slider_wrapper swiper-slide">
 
-                            <?php if (!empty($slide['image'])): ?>
-                                <img src="<?php echo $slide['image']?>" alt="" class="about--slider__image">
+                            <?php if ($slide['image']): ?>
+                                <img src="<?= $slide['image']?>" alt="" class="about--slider__image">
                             <?php endif; ?>
 
                             <div class="about--slider__content about--slider__content--center">
 
-                                <div class="about--slider__subheader"><span><?php echo sprintf("%02d", $key+1);?></span></div>
+                                <div class="about--slider__subheader"><span><?= sprintf("%02d", $key+1);?></span></div>
 
-                                <?php if (!empty($slide['title'])): ?>
-                                    <h2 class="about--slider__header"><?php echo $slide['title']?></h2>
+                                <?php if ($slide['title']): ?>
+                                    <h2 class="about--slider__header"><?= $slide['title']?></h2>
                                 <?php endif; ?>
 
-                                <?php if (!empty($slide['image'])): ?>
-                                    <img src="<?php echo $slide['image']?>" alt="" class="about--slider__content-image">
+                                <?php if ($slide['image']): ?>
+                                    <img src="<?= $slide['image']?>" alt="" class="about--slider__content-image">
                                 <?php endif; ?>
 
-                                <?php if (!empty($slide['text'])): ?>
-                                    <div class="about--slider__text"><?php echo $slide['text']?></div>
+                                <?php if ($slide['text']): ?>
+                                    <div class="about--slider__text"><?= $slide['text']?></div>
                                 <?php endif; ?>
 
                             </div>
