@@ -12,7 +12,7 @@ get_header(); ?>
 
     get_template_part('template-parts/section-green');
 
-    get_template_part('template-parts/about-page/about-slider');
+    get_template_part('template-parts/about-slider');
 
     get_template_part('template-parts/products-slider');
 
