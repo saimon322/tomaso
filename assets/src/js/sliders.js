@@ -8,6 +8,7 @@ const meatSlider = document.querySelector('.products_slider');
 const aboutSlider = document.querySelector('.about--slider__slider')
 const antibioSlider = document.querySelector('.antibio-slider__swiper');
 const fancymapsSlider = document.querySelector('.fancymaps__maps');
+const attitudeSlider = document.querySelector('.attitude_slider');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
 let step = 0;
@@ -150,6 +151,37 @@ if (antibioSlider) {
     });
 }
 
+if (attitudeSlider) {
+    const attitude = new Swiper(attitudeSlider, {
+
+        speed: 500,
+        slidesPerView: 'auto',
+        calculateHeight:true,
+
+        pagination: {
+            el: '.attitude_slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+        },
+
+        breakpoints: {
+            1024: {
+                pagination: false,
+                autoplay: {
+                    enabled: true,
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                grabCursor: true,
+            },
+        },
+
+    });
+}
+
+
 if (fancymapsSlider) {
     const content = document.querySelectorAll('.fancymaps__logo');
     const headElements = document.querySelectorAll('.fancymaps__content');
@@ -161,8 +193,8 @@ if (fancymapsSlider) {
             renderBullet: function (index, className) {
                 return '<span class="' + className + '"><img src="' + (content[index].src) + '"></span>';
             },
-        },     
-        
+        },
+
         on: {
             init: function() {
                 let realIndex = this.realIndex;
