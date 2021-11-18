@@ -73,6 +73,50 @@
         }
     }
 
+    &__two-blocks {
+        display: none;
+
+        @include media-up(lg) {
+            margin-top: 52px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 28px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-content {
+            background: #fff;
+            padding: 41px 57px 40px 57px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-number {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: $color-green;
+        }
+
+        &-header {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 34px;
+            color: $color-black;
+        }
+
+        &-button {
+            margin-top: 38px;
+        }
+
+    }
+
     @include media-up(lg) {
         padding: 107px 100px 100px 100px;
     }
