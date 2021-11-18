@@ -8,10 +8,12 @@
     <%if (bottomSubtitle) {%>
         <div class="banner-green__bottom-subtitle"><%=bottomSubtitle%></div>
     <%}%>
-        <div class="banner-green__circle">
+    <%if (greenCircle) {%>
+    <div class="banner-green__circle">
             <svg width="16px" height="15px">
                 <use xlink:href="#circle_arrow--down"></use>
             </svg>
         </div>
+    <%}%>
 </section>
 

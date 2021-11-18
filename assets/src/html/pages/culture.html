@@ -1,0 +1,56 @@
+<%=_.template(require('../templates/header.html'))({
+title: "Культура потребления | Tomaso",
+contentClass: "",
+menu: {about: "current-menu-item"}
+}) %>
+
+<main>
+    <%=_.template(require('../templates/components/banner.html'))({
+    sectionClass: "",
+    title: "новая культура потребления мяса",
+    text: "",
+    buttonClass: "btn--disable",
+    buttonText: "",
+    background: "../img/base/culture_banner.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/components/about-head.html'))({
+    sectionClass: "about--farm",
+    contentClass: "about_content--reverse",
+    imageClass: "about_image--reverse",
+    subtitle: "Культура потребления",
+    title: "влияние на людей, экологию  и мировой ВВП",
+    "text": "<p>Современная культура потребления — безмерное использование человеком всех возможных благ, в том числе продуктов питания. Мы в Tomaso создаем новую культуру потребления мяса с прогрессивным и осознанным подходом к фермерству.</p><hr><p>Использование антибиотиков в животноводстве повлияло на рост огромного количества дешевого мяса. Объем его потребления выше, чем когда-либо, а качество — хуже. </p><hr><p>Высокий спрос на мясо побуждает растить больше поголовья скота, что увеличивает выбросы метана в атмосферу. Метан, который выделяет домашний скот, стоит на втором месте по разрушению озонового слоя земли и пагубно влияет на климат планеты.</p><hr><p>Фермы могут не использовать антибиотики для выращивания скота и уменьшить его поголовье, чтобы люди получали более дорогое и полезное мясо. Эти действия помогут снизить разведение животных для убоя, нормализовать климат планеты, повысить мировой уровень ВВП, более гуманно относиться к животным и внимательно к жизни и здоровью человека.</p>",
+    "img": "/img/base/culture_about.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/components/green_banner.html'))({
+    sectionClass: "",
+    topSubtitle: "",
+    title: "Делаем мясо в 2 раза дороже не только для прибыли, но для людей и окружающей среды",
+    bottomSubtitle: "",
+    greenCircle: "",
+    }) %>
+
+    <%=_.template(require('../templates/culture/attitude.html'))() %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+    sectionClass: "about--farm",
+    contentClass: "about_content--reverse",
+    imageClass: "about_image--reverse",
+    subtitle: "Правила потребления мяса",
+    title: "Для максимальной пользы  мясо без антибиотиков рекомендуют <span>употреблять 3-4 раза</span> в неделю",
+    "text": "<p>Этого количества достаточно для того, чтобы удовлетворить потребности организма и не причинить вред экологии. Мясо состоит из белков и аминокислот, минералов, жиров и жирных кислот, витаминов и углеводов. Важность мяса заключается в его высококачественном и полезном белке, которого нет в других продуктах питания. Свинина без антибиотиков содержит намного большее количество полезных элементов и считается мясом высокого качества.</p>",
+    "img": "/img/base/about_rullers.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/home/bottom_banner.html'))({
+    title: "Мы в Tomaso создаем новую <span>осознанную культуру</span> потребления",
+    subtitle: "",
+    btn_text: "Стать партнером",
+    image_link: "/img/base/bottom-banner--bg-2.jpg",
+    }) %>
+
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>
