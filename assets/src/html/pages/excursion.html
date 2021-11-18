@@ -11,13 +11,15 @@
         text: "Единственная свиноферма в Украине, которая работает по Европейским стандартам без антибиотиков",
         buttonClass: "btn--transparent",
         buttonText: "Подробнее",
-        background: "../img/base/excurs-banner__bg.jpg",
+        background: "img/base/excurs-banner__bg.jpg",
     }) %>
 
     <%=_.template(require('../templates/excursion/excursion-slider.html'))({
         subtitle: "Форматы экскурсий",
         title: "Существует <span>несколько форматов</span> экскурсионных программ"
     }) %>
+
+    <%=_.template(require('../templates/excursion/included.html'))() %>
 
     <%=_.template(require('../templates/components/green_banner.html'))({
         sectionClass: "",

@@ -1,20 +1,44 @@
 .excursion-slider {
     background: $color-white;
 
+    &__wrapper {
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+        @include media-up(lg) {
+            padding-top: 120px;
+            padding-bottom: 140px;
+            display: grid;
+            grid-template-columns: 1fr 540px;
+            column-gap: 108px;
+        }
+    }
+
+    &__swiper {
+        height: 314px !important;
+        @include media-up(lg) {
+            max-width: 540px;
+            height: 524px !important;
+        }
+
+        &-slide {
+            position: relative;
+            @include media-up(lg) {
+                width: 540px;
+            }
+        }
+    }
+
     &__subtitle {
-        margin-top: 50px;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        @include media-up(lg) {
-
-        }
     }
     
     &__title {
         margin-top: 10px;
+        margin-bottom: 30px;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
@@ -22,7 +46,10 @@
         text-transform: uppercase;
         
         @include media-up(lg) {
-
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 40px;
         }
 
         span {
@@ -30,23 +57,94 @@
         }
     }
 
-    &__right {
-        position: relative;
+    &__pagination {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
 
-        &-text {
-            padding: 50px 20px;
-            position: absolute;
-            bottom: 0;
-            font-style: normal;
-            font-weight: normal;
+        @include media-up(lg) {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .swiper-pagination-bullet {
             font-size: 14px;
             line-height: 20px;
-            color: #fff;
+            color: $color-dark;
+            margin: 0 !important;
+            background: none;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            border-bottom: 0.5px solid #030E05;
+            padding-bottom: 4px;
+
+            &-active {
+                color: $color-green;
+                border-color: $color-green;
+            }
+
+            @include media-up(lg) {
+                padding: 26px 0;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 30px;
+                opacity: 1;
+                color: $color-black;
+
+                &-active {
+                    color: $color-black;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 30px;
+                    padding: 26px 18px;
+                    background: #EDECEC;
+                }
+            }
+        }
+    }
+
+    &__pagination-num {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color-green;
+    }
+
+    &__header {
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color-black;
+
+        @include media-up(lg) {
+            display: none;
+        }
+    }
+
+    &__text {
+        padding: 50px 20px;
+        position: absolute;
+        bottom: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+
+        @include media-up(lg) {
+            font-size: 17px;
+            line-height: 28px;
         }
     }
 
     &__img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 

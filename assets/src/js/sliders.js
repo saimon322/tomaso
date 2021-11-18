@@ -9,8 +9,10 @@ const aboutSlider = document.querySelector('.about--slider__slider')
 const antibioSlider = document.querySelector('.antibio-slider__swiper');
 const fancymapsSlider = document.querySelector('.fancymaps__maps');
 const attitudeSlider = document.querySelector('.attitude_slider');
+const excursionSlider = document.querySelector('.excursion-slider__swiper');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
+const bp992 = window.matchMedia('(min-width: 992px)');
 let step = 0;
 
 function optionsFunc(sliderPref) {
@@ -218,4 +220,22 @@ if (fancymapsSlider) {
         });
     }
 
+}
+
+if (excursionSlider) {
+    const paginationTexts = document.querySelectorAll('.excursion-slider__header');
+    const excursions = new Swiper(excursionSlider, {
+        loop: true,
+        pagination: {
+            el: '.excursion-slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                if (bp992.matches) {
+                    return '<span class="' + className + '"><span class="excursion-slider__pagination-num">0' + (index + 1) + '. </span>' + paginationTexts[index].innerText + '</span>';
+                } else {
+                    return '<span class="' + className + '">0' + ++index + '.</span>';
+                }
+            },
+        },
+    });
 }
