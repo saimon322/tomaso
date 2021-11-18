@@ -38,7 +38,7 @@
   &--main-vertical {
     padding: 20px 0;
     @include media-up(md) {
-      padding: 60px 0;
+      padding: 80px 0 68px 0;
     }
     .swiper {
       width: calc(100% + 30px);
