@@ -1,32 +1,32 @@
 <?php $products = get_field('products');?>
-<?php if (!empty($products)): ?>
+<?php if ($products): ?>
     <section class="products_section">
         <div class="products_marker">
-            <img src="<?php echo get_template_directory_uri()?>/assets/dist/img/icons/antibiotic_marker.svg" alt="">
+            <img src="<?= get_template_directory_uri()?>/assets/dist/img/icons/antibiotic_marker.svg" alt="">
         </div>
         <div class="container">
-            <?php if (!empty($products['subtitle'])): ?>
-                <div class="section-subtitle section-subtitle--center"><?php echo $products['subtitle']?></div>
+            <?php if ($products['subtitle']): ?>
+                <div class="section-subtitle section-subtitle--center"><?= $products['subtitle']?></div>
             <?php endif; ?>
 
-            <?php if (!empty($products['title'])): ?>
-                <h2 class="section-title section-title--center"><?php echo $products['title']?></h2>
+            <?php if ($products['title']): ?>
+                <h2 class="section-title section-title--center"><?= $products['title']?></h2>
             <?php endif; ?>
 
-            <?php if (!empty($products['slider'])): ?>
+            <?php if ($products['slider']): ?>
                 <div class="products_slider swiper-container">
                     <div class="swiper-wrapper">
                         <?php foreach ($products['slider'] as $product):?>
                             <div class="products_item swiper-slide">
 
-                                <?php if (!empty($product['slider_image'])): ?>
+                                <?php if ($product['slider_image']): ?>
                                     <div class="products_image">
-                                        <img src="<?php echo $product['slider_image']?>" alt="">
+                                        <img src="<?= $product['slider_image']?>" alt="">
                                     </div>
                                 <?php endif; ?>
 
-                                <?php if (!empty($product['slider_title'])): ?>
-                                    <div class="products_name"><?php echo $product['slider_title']?></div>
+                                <?php if ($product['slider_title']): ?>
+                                    <div class="products_name"><?= $product['slider_title']?></div>
                                 <?php endif; ?>
 
                             </div>

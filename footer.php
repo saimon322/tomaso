@@ -21,15 +21,15 @@
             <div class="footer__contacts">
                 <div class="footer__links">
                     <?php if (!empty($footer_settings['phone_number'])): ?>
-                        <a href="tel:<?php echo $footer_settings['phone_number']?>"><?php echo $footer_settings['phone_number']?></a>
+                        <a href="tel:<?= $footer_settings['phone_number']?>"><?= $footer_settings['phone_number']?></a>
                     <?php endif; ?>
                     <?php if (!empty($footer_settings['email'])): ?>
-                        <a href="mailto:<?php echo $footer_settings['email']?>"><?php echo $footer_settings['email']?></a>
+                        <a href="mailto:<?= $footer_settings['email']?>"><?= $footer_settings['email']?></a>
                     <?php endif; ?>
                 </div>
 
                 <?php if (!empty($footer_settings['address'])): ?>
-                    <p class="footer__address"><?php echo $footer_settings['address']?></p>
+                    <p class="footer__address"><?= $footer_settings['address']?></p>
                 <?php endif; ?>
 
             </div>
@@ -41,13 +41,13 @@
                     </svg>
                 </a>
                 <?php if (!empty($footer_settings['copyright'])): ?>
-                    <p class="footer__text"><?php echo $footer_settings['copyright']?></p>
+                    <p class="footer__text"><?= $footer_settings['copyright']?></p>
                 <?php endif; ?>
                 <?php if (!empty($footer_settings['rights'])): ?>
-                    <p class="footer__text"><?php echo $footer_settings['rights']?></p>
+                    <p class="footer__text"><?= $footer_settings['rights']?></p>
                 <?php endif; ?>
                 <?php if (!empty($footer_settings['designed'])): ?>
-                    <p class="footer__text"><?php echo $footer_settings['designed']?></p>
+                    <p class="footer__text"><?= $footer_settings['designed']?></p>
                 <?php endif; ?>
             </div>
         </div>
