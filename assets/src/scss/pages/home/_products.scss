@@ -4,6 +4,10 @@
         padding: 49px 0 60px 0;
         background-image: url("../img/icons/lines_bg.svg");
         background-color: #F8F8F8;
+
+        @include media-up(lg) {
+            padding: 87px 0 105px 0;
+        }
     }
 
     &_marker {

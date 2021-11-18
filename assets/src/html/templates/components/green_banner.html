@@ -15,5 +15,21 @@
             </svg>
         </div>
     <%}%>
+    <%if (twoBlocks) {%>
+        <div class="banner-green__two-blocks">
+            <div class="banner-green__two-blocks-content">
+                <div class="banner-green__two-blocks-texts">
+                    <div class="banner-green__two-blocks-number"><%=twoBlocks.number.one%></div>
+                    <div class="banner-green__two-blocks-header"><%=twoBlocks.header.one%></div>
+                </div>
+                <a href="#" class="btn btn--transparent btn--green-borders banner-green__two-blocks-button"><%=twoBlocks.buttonText.one%></a>
+            </div>
+            <div class="banner-green__two-blocks-content">
+                <div class="banner-green__two-blocks-number"><%=twoBlocks.number.two%></div>
+                <div class="banner-green__two-blocks-header"><%=twoBlocks.header.two%></div>
+                <a href="#" class="btn btn--transparent btn--green-borders banner-green__two-blocks-button"><%=twoBlocks.buttonText.two%></a>
+            </div>
+        </div>
+    <%}%>
 </section>
 

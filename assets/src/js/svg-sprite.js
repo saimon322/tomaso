@@ -8,3 +8,6 @@ import '../img/svg-sprite/circle_arrow--down.svg';
 // slider
 import '../img/svg-sprite/slider_arrow--left.svg';
 import '../img/svg-sprite/slider_arrow--right.svg';
+
+// fancymaps
+import '../img/svg-sprite/fancymaps-close.svg';

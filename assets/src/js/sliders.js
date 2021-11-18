@@ -7,6 +7,7 @@ const vertSliderBottom = document.querySelector('.slider--main-vertical-bottom .
 const meatSlider = document.querySelector('.products_slider');
 const aboutSlider = document.querySelector('.about--slider__slider')
 const antibioSlider = document.querySelector('.antibio-slider__swiper');
+const fancymapsSlider = document.querySelector('.fancymaps__maps');
 const attitudeSlider = document.querySelector('.attitude_slider');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
@@ -178,4 +179,43 @@ if (attitudeSlider) {
         },
 
     });
+}
+
+
+if (fancymapsSlider) {
+    const content = document.querySelectorAll('.fancymaps__logo');
+    const headElements = document.querySelectorAll('.fancymaps__content');
+    const fancymapsLinks = document.querySelectorAll('.where_buy__item-link');
+    const fancymaps = new Swiper(fancymapsSlider, {
+        pagination: {
+            el: '.fancymaps__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"><img src="' + (content[index].src) + '"></span>';
+            },
+        },
+
+        on: {
+            init: function() {
+                let realIndex = this.realIndex;
+                headElements.forEach(el => {
+                    el.style.display = 'none';
+                })
+                headElements[realIndex].style.display = 'flex';
+            },
+            slideChange: function() {
+                let realIndex = this.realIndex;
+                headElements.forEach(el => {
+                    el.style.display = 'none';
+                })
+                headElements[realIndex].style.display = 'flex';
+            },
+        }
+    });
+    for(let i = 0; i < fancymapsLinks.length; i++) {
+        fancymapsLinks[i].addEventListener('click', function() {
+            fancymaps.slideTo(i);
+        });
+    }
+
 }

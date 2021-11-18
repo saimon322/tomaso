@@ -59,10 +59,12 @@ module.exports = mode => {
             new webpack.DefinePlugin({
                 PRODUCTION: PRODUCTION,
             }),
-            new webpack.ProvidePlugin({
-                $: 'jquery',
-                jQuery: 'jquery',
-            }),
+            new webpack.IgnorePlugin(/^jquery/),
+            new webpack.IgnorePlugin(/^domready/),
+            // new webpack.ProvidePlugin({
+            //     $: 'jquery',
+            //     jQuery: 'jquery',
+            // }),
             new CopyPlugin([
                 {from: 'img/**/*'},
                 {from: 'fonts/**/*'},
