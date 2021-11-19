@@ -1,4 +1,4 @@
-<?php $about_us = get_field('about_us'); ?>
+<?php $about_us = get_field('about_us'. ($args['n'] ? $args['n'] : '')); ?>
 <?php if ($about_us):
     $classes = [];
     if ($about_us['right_image']) {
@@ -8,19 +8,44 @@
              'content' => ' about_content--reverse',
         ];
     }
+    if ($about_us['titles_top']) {
+        $classes = [
+            'section' => ' about--content-text',
+        ];
+    }
     ?>
     <section class="about<?= $classes['section']?>">
+        <?php if ($about_us['titles_top']): ?>
+            <div class="about_head">
+                <div class="container">
+                    <?php if ($about_us['subtitle']): ?>
+                        <div class="about_subheader"><?= $about_us['subtitle']?></div>
+                    <?php endif; ?>
+
+                    <?php if ($about_us['title']): ?>
+                        <h2 class="about_header"><?= $about_us['title']?></h2>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+
         <div class="container about_wrapper">
             <?php if ($about_us['image']): ?>
                 <img src="<?= $about_us['image']?>" alt="" class="about_image<?= $classes['image']?>">
             <?php endif; ?>
             <div class="about_content<?= $classes['content']?>">
-                <?php if ($about_us['subtitle']): ?>
-                    <div class="about_subheader"><?= $about_us['subtitle']?></div>
+                <?php if (!$about_us['titles_top']): ?>
+
+                    <?php if ($about_us['subtitle']): ?>
+                        <div class="about_subheader"><?= $about_us['subtitle']?></div>
+                    <?php endif; ?>
+
+                    <?php if ($about_us['title']): ?>
+                        <h2 class="about_header"><?= $about_us['title']?></h2>
+                    <?php endif; ?>
+
                 <?php endif; ?>
-                <?php if ($about_us['title']): ?>
-                    <h2 class="about_header"><?= $about_us['title']?></h2>
-                <?php endif; ?>
+
                 <?php if ($about_us['description']): ?>
                     <div class="about_text"><?= $about_us['description']?></div>
                 <?php endif; ?>

@@ -1,0 +1,23 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "Партнерам  | Tomaso",
+    contentClass: "",
+    menu: {about: "current-menu-item"}
+}) %>
+
+<main class="main main--contacts">
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "banner--contact",
+        title: "КОНТАКТЫ",
+        text: "",
+        buttonClass: "btn--disable",
+        buttonText: "",
+        background: "img/base/contacts-banner__bg.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/contacts/contacts-map.html'))() %>
+
+    <%=_.template(require('../templates/home/where_buy.html'))() %>
+
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>

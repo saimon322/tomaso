@@ -56,7 +56,7 @@
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
+
         @include media-up(lg) {
             margin-top: 20px;
             font-size: 17px;
@@ -69,6 +69,6 @@
     }
 
     @include media-up(lg) {
-        background: $color-white;
+        background: $color-white-1;
     }
 }
