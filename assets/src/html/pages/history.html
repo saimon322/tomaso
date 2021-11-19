@@ -1,0 +1,38 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "История | Tomaso",
+    contentClass: "",
+    menu: {}
+}) %>
+
+<main class="main">
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "",
+        title: "История австрийца",
+        text: "Который создал бизнес с мировыми стандартами производства на территории Украины",
+        buttonClass: "",
+        buttonText: "",
+        background: "img/base/history-main-bg.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+        sectionClass: "about--farm",
+        contentClass: "",
+        imageClass: "",
+        subtitle: "О Томасе",
+        title: "СОБСТВЕННАЯ СИСТЕМА <span>ТИМОШЕВКА</span>",
+        "text": "<p>Томаса хорошо знают в Украине и за рубежом. Он и семья выращивают животных без антибиотиков по собственной Системе Тимошовка. Эту систему переняли более 40 фермерских хозяйств в Швейцарии.</p><br><p>В 2006 году Томас и партнеры приняли решение делать осознанный и ответственный бизнес. Сегодня ферма Тимошовка и продукция Tomaso задают новый стандарт качества свинины и ее производства в Украине и по всему миру.</p>",
+        "img": "img/base/tomas.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/history/history-slider.html'))() %>
+
+    <%=_.template(require('../templates/home/bottom_banner.html'))({
+        title: "Семейный бизнес Томаса Бруннера— <span>воплощение мечты</span>, осознанности и инноваций",
+        subtitle: "Мы знаем, как строить бизнес по-новому, и ищем партнеров для реализации своих продуктов и миссии",
+        btn_text: "Стать партнером",
+        image_link: "img/base/bottom-banner--bg-1.jpg",
+    }) %>
+
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>

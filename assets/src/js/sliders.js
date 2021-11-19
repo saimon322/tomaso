@@ -11,9 +11,11 @@ const fancymapsSlider = document.querySelector('.fancymaps__maps');
 const attitudeSlider = document.querySelector('.attitude_slider');
 const excursionSlider = document.querySelector('.excursion-slider__swiper');
 const excursionGallerySlider = document.querySelector('.excursion-gallery__swiper');
+const historySlider = document.querySelector('.history-slider__swiper');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
 const bp992 = window.matchMedia('(min-width: 992px)');
+const bp1440 = window.matchMedia('(min-width: 1440px)');
 let step = 0;
 
 function optionsFunc(sliderPref) {
@@ -258,6 +260,33 @@ if (excursionGallerySlider) {
                 spaceBetween: 15,
                 allowTouchMove: true,
                 grabCursor: true,
+            },
+        },
+    })
+}
+
+if (historySlider) {
+    const years = document.querySelectorAll('.history-slider__subheader');
+    const headers = document.querySelectorAll('.history-slider__header');
+    const histories = new Swiper(historySlider, {
+        loop: true,
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.history-slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                if (bp1440.matches) {
+                    return '<span class="' + className + '">' + '<span class="history-slider__pagination-year">' + years[index].innerText + '</span><span class="history-slider__pagination-header">' + headers[index].innerText + '</span>' + '</span>';
+                } else {
+                    return '<span class="' + className + '">' + years[index].innerText + '</span>';
+                }
+            },
+        },
+        breakpoints: {
+            992: {
+                slideToClickedSlide: true,
+                centeredSlides: true,
+                allowTouchMove: true,
             },
         },
     })
