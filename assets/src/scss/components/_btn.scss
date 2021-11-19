@@ -2,7 +2,7 @@
   display: block;
   padding: 17px 17px 18px;
   text-decoration: none;
-  color: $color-white;
+  color: $color-white-1;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
@@ -46,10 +46,10 @@
       transition: background-color .25s, height .25s;
     }
 
-    &:hover {      
+    &:hover {
       color: #fff;
       border-color: transparent;
-      
+
       &:after {
         height: 100%;
         background-color: $color-green-1;
@@ -92,6 +92,16 @@
 
     @include media-up(md) {
       display: none;
+    }
+  }
+
+  &--white {
+    background: $color-white-2;
+    color: $color-black;
+    margin-top: 40px;
+    &:hover {
+      background: $color-white-2;
+      color: $color-black;
     }
   }
 }

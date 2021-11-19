@@ -1,0 +1,97 @@
+.main--contacts {
+  background: $color-white-1;
+}
+.contacts {
+  margin-top: -40px;
+
+  @include media-up(lg) {
+    margin-top: -240px;
+  }
+
+  &__container {
+    padding: 0;
+    background: $color-white-2;
+
+    @include media-up(lg) {
+      max-width: 1154px;
+      display: flex;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 224px;
+
+    @include media-up(lg) {
+      width: 60%;
+      height: 412px;
+      order: 1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__data {
+    padding: 20px 14px 62px 53px;
+
+    @include media-up(lg) {
+      padding: 60px 0 60px 74px
+    }
+  }
+
+  &__place--name {
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-black;
+    margin-bottom: 10px;
+
+    @include media-up(lg) {
+      line-height: 19px;
+      margin-bottom: 14px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 0;
+      width: 14px;
+      height: 17px;
+      background: url("../img/icons/map_marker.svg") no-repeat center;
+    }
+  }
+
+  &__place--address {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+    opacity: 0.6;
+    margin-bottom: 20px;
+
+    @include media-up(lg) {
+      line-height: 24px;
+      margin-bottom: 37px;
+    }
+  }
+
+  &__callback {
+    margin-top: 4px;
+    a {
+      display: block;
+      font-size: 16px;
+      line-height: 19px;
+      color: $color-black;
+    }
+  }
+
+  &__callback--phone {
+    font-weight: 800;
+    margin-bottom: 13px;
+  }
+}

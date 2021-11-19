@@ -1,0 +1,55 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "Партнерам  | Tomaso",
+    contentClass: "header--black",
+    menu: {about: "current-menu-item"}
+}) %>
+
+<main class="main">
+    <%=_.template(require('../templates/components/banner.html'))({
+        sectionClass: "",
+        title: "Бизнес модель будущего с заботой о клиенте",
+        text: "",
+        buttonClass: "btn--disable",
+        buttonText: "",
+        background: "img/base/partners_banner.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+    sectionClass: "",
+    contentClass: "",
+    imageClass: "",
+    subtitle: "Бизнес модель",
+    title: "Качество, за которое мы несем <span>ответственность</span> перед каждым",
+    "text": "<p>Наш бизнес нацелен на постоянное развитие и высокое качество. Основа нашего бизнеса — забота. Мы заботимся о клиентах, партнерах, животных, климате и ВВП, а еще о собственных желаниях и прибыли.</p><hr><p>Весь наш продукт — про гедонизм и комфорт клиента от взаимодействия с нами. Мы помогаем партнерам создавать экосистему, в которой конечный клиент получит удовольствие и куда захочет вернуться.</p>",
+    "img": "img/base/partners_about.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/components/green_banner.html'))({
+    sectionClass: "banner-green--small-padding",
+    topSubtitle: "",
+    title: "Хочу продавать Tomaso",
+    bottomSubtitle: "Для того чтобы стать нашим партнером и продавать мясо, хамон и прошутто наивысшего качества, оставьте ваши контактные данные, и мы с вами свяжемся",
+    greenCircle: "",
+    twoBlocks: "",
+    whiteBtn: "yep",
+    }) %>
+
+    <%=_.template(require('../templates/components/about.html'))({
+    sectionClass: "about--farm",
+    contentClass: "about_content--reverse",
+    imageClass: "about_image--reverse",
+    subtitle: "Франчайзинг Системы Тимошовка",
+    title: "Система Тимошовка — модель развития здорового, <span>экологичного бизнеса</span> будущего",
+    "text": "<p>С 2016 года мы делимся своей меделью бизнеса с производствами и фермами Швейцарии, Австрии, Японии.</p><hr><p>В Украине мы готовы помогать фермерским хозяйствам, которые хотят работать и зарабатывать, так же как и мы: делиться опытом, наработками, контролировать качество.</p><hr><p>Наша миссия — делиться опытом.<br>Мы стремимся к тому, чтобы все фермерские хозяйства были на очень высоком уровне, много вкладывались и уделяли внимание внутренним процессам и стандартам, и зарабатывали больше.</p>",
+    "img": "img/base/partners_about-2.jpg",
+    }) %>
+
+    <%=_.template(require('../templates/home/bottom_banner.html'))({
+    title: "Мы убеждены, что <span>партнерство строится</span> на общности целей",
+    subtitle: "Сверить ценности бизнеса, посмотреть на уровень производства и<br> наши стандарты качества можно, приехав к нам на ферму ",
+    btn_text: "Стать партнером",
+    image_link: "img/base/bottom-banner--bg-2.jpg",
+    }) %>
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>
