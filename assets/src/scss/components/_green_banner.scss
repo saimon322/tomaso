@@ -77,11 +77,13 @@
         display: none;
 
         @include media-up(lg) {
+            width: 100%;
             margin-top: 52px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: 28px;
             position: absolute;
+            z-index: 10;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -124,6 +126,12 @@
     &--small-padding {
         @include media-up(lg) {
             padding: 60px;
+        }
+    }
+
+    &--two-blocks {
+        @include media-up(lg) {
+            padding-bottom: 209px;
         }
     }
 }
