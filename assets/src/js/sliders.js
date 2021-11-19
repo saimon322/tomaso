@@ -10,6 +10,7 @@ const antibioSlider = document.querySelector('.antibio-slider__swiper');
 const fancymapsSlider = document.querySelector('.fancymaps__maps');
 const attitudeSlider = document.querySelector('.attitude_slider');
 const excursionSlider = document.querySelector('.excursion-slider__swiper');
+const excursionGallerySlider = document.querySelector('.excursion-gallery__swiper');
 
 const bp576 = window.matchMedia('(min-width: 576px)');
 const bp992 = window.matchMedia('(min-width: 992px)');
@@ -238,4 +239,26 @@ if (excursionSlider) {
             },
         },
     });
+}
+
+if (excursionGallerySlider) {
+    const excursionGallery = new Swiper(excursionGallerySlider, {
+        loop: true,
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.excursion-gallery__pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.excursion-gallery__next',
+            prevEl: '.excursion-gallery__prev',
+        },
+        breakpoints: {
+            992: {
+                spaceBetween: 15,
+                allowTouchMove: true,
+                grabCursor: true,
+            },
+        },
+    })
 }

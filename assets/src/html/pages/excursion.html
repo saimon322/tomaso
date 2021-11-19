@@ -22,7 +22,7 @@
     <%=_.template(require('../templates/excursion/included.html'))() %>
 
     <%=_.template(require('../templates/components/green_banner.html'))({
-        sectionClass: "",
+        sectionClass: "banner-green--two-blocks",
         topSubtitle: "",
         title: "Мы ищем партнеров",
         bottomSubtitle: "Мы готовы делиться своим опытом и хотим, чтобы как можно больше людей влияло на изменения в мире и разделяло нашу миссию: развивать животноводство без антибиотиков.",
@@ -43,6 +43,12 @@
         },
         whiteBtn: "",
     }) %>
+
+    <%=_.template(require('../templates/excursion/two-facts-mobile.html'))() %>
+
+    <%=_.template(require('../templates/excursion/excursion-gallery.html'))() %>
+
+    <%=_.template(require('../templates/excursion/info-numbers.html'))() %>
 
 </main>
 
