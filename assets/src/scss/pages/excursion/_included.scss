@@ -1,0 +1,92 @@
+.included {
+    background: $color-white;
+
+    @include media-up(lg) {
+        background: #fff;
+    }
+
+    &__wrapper {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__content {
+        @include media-up(lg) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 77px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-black;
+
+        @include media-up(lg) {
+            text-align: left;
+            font-size: 28px;
+            line-height: 40px;
+            margin-bottom: 49px;
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @include media-up(lg) {
+            display: block;
+            height: 611px;
+            object-fit: cover;
+        }
+    }
+
+    &__texts {
+        position: relative;
+
+        @include media-up(lg) {
+            margin-top: 22px;
+            height: fit-content;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-left: 48px;
+            height: 67px;
+
+            @include media-up(lg) {
+                margin-left: 71px;
+            }
+        }
+    }
+
+    &__line {
+        position: absolute;
+        height: calc(100% - 114px);
+        width: 36px;
+        top: 87px;
+        background: url(../img/icons/big-line.svg);
+
+        @include media-up(lg) {
+            top: 117px;
+            height: calc(100% - 221px);
+        }
+    }
+
+    &__btn {
+        display: none;
+        @include media-up(lg) {
+            display: block;
+            margin-top: 16px;
+        }
+    }
+
+
+}
