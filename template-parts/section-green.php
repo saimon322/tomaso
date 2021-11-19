@@ -1,6 +1,6 @@
 <?php $section_green = get_field('section-green' . ($args['n'] ? $args['n'] : '')); ?>
 <?php if ($section_green): ?>
-    <section class="banner-green <?= $args['n'] ? 'green--small-padding' : '';?>">
+    <section class="banner-green <?= $args['n'] ? 'banner-green--small-padding' : '';?>">
 
         <?php if ($section_green['top_subtitle']): ?>
             <div class="banner-green__top-subtitle"><?= $section_green['top_subtitle']?></div>
