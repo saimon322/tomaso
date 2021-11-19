@@ -1,6 +1,10 @@
 .excursion-gallery {
     background: #fff;
 
+    @include media-up(lg) {
+        background: #F8F8F8;
+    }
+
     &__wrapper {
         padding-top: 40px;
         padding-bottom: 60px;
@@ -98,7 +102,7 @@
         width: 52px;
         height: 52px;
         opacity: .5;
-        transition: opacity .25;
+        transition: opacity .25s;
 
         &:hover {
             opacity: 1;

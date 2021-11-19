@@ -1,0 +1,63 @@
+.booking {
+    position: relative;
+    height: 517px;
+
+    @include media-up(lg) {
+        height: 601px;
+    }
+    
+    &__wrapper {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding-top: 19px;
+        padding-bottom: 40px;
+
+        @include media-up(lg) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__header {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include media-up(lg) {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+
+        @include media-up(lg) {
+            width: auto;
+            margin-top: 43px;
+        }
+    }
+
+    &__img {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 517px;
+        object-fit: cover;
+        object-position: top center;
+
+        @include media-up(lg) {
+            height: 500px;
+            top: auto;
+            bottom: 0;
+        }
+    }
+}

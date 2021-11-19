@@ -9,6 +9,7 @@
   letter-spacing: 0.02em;
   background-color: $color-green;
   transition: background-color .25s, color .25s, border-color .25s;
+  cursor: pointer;
 
   &:hover {
     background-color: $color-green-1;

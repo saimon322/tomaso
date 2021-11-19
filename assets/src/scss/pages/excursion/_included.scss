@@ -8,6 +8,11 @@
     &__wrapper {
         padding-top: 60px;
         padding-bottom: 60px;
+
+        @include media-up(lg) {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
     }
 
     &__content {
