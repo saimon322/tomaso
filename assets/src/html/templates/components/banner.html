@@ -4,7 +4,9 @@
             <h1 class="banner__title"><%=title%></h1>
             <div class="banner__text"><%=text%></div>
         </div>
-        <a href="#" class="btn banner__button <%=buttonClass%>"><%=buttonText%></a>
+        <%if (buttonText) {%>
+            <a href="#" class="btn banner__button <%=buttonClass%>"><%=buttonText%></a>
+        <%}%>
     </div>
     <img src="<%=background%>" class="banner__bg" alt="">
 </section>
