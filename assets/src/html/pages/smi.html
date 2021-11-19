@@ -1,0 +1,20 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "История | Tomaso",
+    contentClass: "header--black",
+    menu: {}
+}) %>
+
+<main class="main">
+    <%=_.template(require('../templates/smi/smi-banner.html'))() %>
+    
+    <%=_.template(require('../templates/smi/smi-links.html'))() %>
+
+    <%=_.template(require('../templates/home/bottom_banner.html'))({
+        title: "Семейный бизнес Томаса Бруннера— <span>воплощение мечты</span>, осознанности и инноваций",
+        subtitle: "Мы знаем, как строить бизнес по-новому, и ищем партнеров для реализации своих продуктов и миссии",
+        btn_text: "Стать партнером",
+        image_link: "img/base/smi-bottom-bg.jpg",
+    }) %>
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>
