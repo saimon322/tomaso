@@ -15,16 +15,48 @@
     &__subtitle {
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 14px;
+        line-height: 20px;
         text-align: center;
+        color: $color-dark;
+
+        span {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: $color-dark;
+            }
+        }
+
+        @include media-up(lg) {
+            font-size: 20px;
+            line-height: 30px;
+        }
     }
 
     &__title {
+        margin-top: 10px;
         font-style: normal;
         font-weight: bold;
-        font-size: 28px;
-        line-height: 40px;
+        font-size: 18px;
+        line-height: 30px;
         text-align: center;
+        text-transform: uppercase;
+
+        span {
+            color: $color-green;
+        }
+
+        @include media-up(lg) {
+            margin-top: 13px;
+            font-size: 28px;
+            line-height: 40px;
+        }
     }
 }

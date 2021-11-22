@@ -1,12 +1,7 @@
 .antibio-green {
-
-    .green__top-subtitle {
-        span {
-            border-bottom: 1px #fff solid;
-        }
-    }
+    background-image: none;
     
-    .green__title {
+    .banner-green__title {
         @include media-up(lg) {
             font-size: 28px;
             line-height: 40px;
@@ -14,7 +9,7 @@
 
         span {
             font-weight: 500;
-            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.8);
         }
     }
 

@@ -6,8 +6,8 @@
             margin-top: 0;
             padding-top: 30px;
             background: transparent;
+            overflow: hidden;
             @include media-up(lg) {
-                margin-top: 120px;
                 padding-top: 0;
                 background: #fff;
             }

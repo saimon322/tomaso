@@ -16,7 +16,9 @@
 
     <%=_.template(require('../templates/contacts/contacts-map.html'))() %>
 
-    <%=_.template(require('../templates/home/where_buy.html'))() %>
+    <%=_.template(require('../templates/home/where_buy.html'))({
+        sectionClass: "",
+    }) %>
 
     <%=_.template(require('../templates/fancybox/fancymaps.html'))() %>
 

@@ -30,6 +30,7 @@
         font-size: 16px;
         line-height: 24px;
         color: $color-black;
+        opacity: 0.7;
     }
 
     &__title {
@@ -39,6 +40,7 @@
         font-size: 18px;
         line-height: 30px;
         text-transform: uppercase;
+        color: $color-black;
 
         span {
             color: $color-green;
@@ -56,6 +58,7 @@
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
+        color: $color-dark;
 
         @include media-up(lg) {
             margin-top: 20px;

@@ -1,13 +1,28 @@
 .farm__slider {
-    background: #fff;
+    margin-bottom: 0;
+    background: $color-white-1;
+    padding-top: 30px;
+    padding-bottom: 10px;
 
     @include media-up(lg) {
+        padding-top: 60px;
         background: $color-white-1;
     }
 
     .about--slider {
         &__pagination {
-            margin-top: 40px;
+            margin-top: 40px !important;
+        }
+
+        &__title {
+
+        }
+    }
+
+    .about--slider_wrapper {
+        @include media-up(lg) {
+            padding-top: 60px;
+            padding-bottom: 100px;
         }
     }
 }

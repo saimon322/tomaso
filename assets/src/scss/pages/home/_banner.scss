@@ -2,7 +2,12 @@
   position: relative;
   color: $color-white-1;
   text-align: center;
-  height: 700px;
+  height: 410px;
+  padding-top: 38px;
+
+  @include media-up(lg) {
+    height: 736px;
+  }
 
   &--big {
     height: 812px;
