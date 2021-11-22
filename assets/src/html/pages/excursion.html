@@ -52,7 +52,13 @@
 
     <%=_.template(require('../templates/excursion/publications.html'))() %>
 
-    <%=_.template(require('../templates/excursion/booking.html'))() %>
+    <%=_.template(require('../templates/home/bottom_banner.html'))({
+        sectionClass: "bottom-banner--excursion",
+        title: "Забронировать экскурсию на ферму",
+        subtitle: "",
+        btn_text: "Забронировать",
+        image_link: "img/base/excursion-bottom-banner.jpg",
+    }) %>
 
     <%=_.template(require('../templates/fancybox/fancyform.html'))({
     formTitle: 'Забронировать экскурсию на ферму',

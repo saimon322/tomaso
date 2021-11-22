@@ -42,4 +42,34 @@
       bottom: 0;
     }
   }
+
+  &--excursion {
+    height: 517px;
+
+    @include media-up(lg) {
+      height: 601px;
+    }
+
+    .bottom-banner__content {
+      padding-top: 19px;
+    }
+
+    .bottom-banner__title {
+      @include media-up(lg) {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+
+    .banner__bg {
+      height: 100%;
+      object-position: top center;
+
+      @include media-up(lg) {
+        height: 500px;
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
 }
