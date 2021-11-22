@@ -1,5 +1,9 @@
 .excursion-slider {
-    background: $color-white-1;
+    background: $color-white-2;
+
+    @include media-up(lg) {
+        background: #F8F8F8;
+    }
 
     &__wrapper {
         padding-top: 50px;

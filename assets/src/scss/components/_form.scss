@@ -1,7 +1,12 @@
 .form {
   &--contact {
-    background: #fff;
-    padding: 100px 0;
+    background: $color-white-1;
+    padding: 20px 0;
+
+    @include media-up(lg) {
+      padding: 100px 0;
+      background: #fff;
+    }
   }
 
   &__wrapper {
