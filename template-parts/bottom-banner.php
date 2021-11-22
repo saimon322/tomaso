@@ -12,11 +12,17 @@
                 <?php endif; ?>
             </div>
 
-            <?php if ($bottom_banner['button']): ?>
+            <?php if ($bottom_banner['button']):
+                $attributes = '';
+                if ($bottom_banner['open_modal_btn']){
+                    $attributes = 'data-fancybox';
+                } else {
+                    $attributes = $bottom_banner['button']['target'] ? 'target="'.$bottom_banner['button']['target'].'"' : ' ';
+                }?>
                 <a
                         href="<?= $bottom_banner['button']['url']?>"
                         class="btn btn--green banner__button"
-                    <?= $bottom_banner['button']['target'] ? 'target="'.$bottom_banner['button']['target'].'"' : ' '?>
+                        <?= $attributes?>
                 >
                     <?= $bottom_banner['button']['title']?>
                 </a>
@@ -28,4 +34,9 @@
         <?php endif; ?>
 
     </section>
+
+    <?php if ($bottom_banner['open_modal_btn']):
+        get_template_part('template-parts/modal-form');
+    endif; ?>
+
 <?php endif; ?>

@@ -49,6 +49,8 @@
         position: absolute;
         overflow: hidden;
         background: #fff;
+        border: 0.5px solid rgba(0,0,0,0.2);
+        border-top-width: 0;
         top: 100%;
         left: 0;
         right: 0;
@@ -65,7 +67,7 @@
 
             &.selected,
             &:hover {
-                background-color: var(--color-monochrome);
+                background-color: $color-white-1;
             }
         }
     }

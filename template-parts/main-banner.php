@@ -10,11 +10,17 @@
                     <div class="banner__text"><?= $top_banner['subtitle']?></div>
                 <?php endif; ?>
             </div>
-            <?php if ($top_banner['button']): ?>
+            <?php if ($top_banner['button']):
+                $attributes = '';
+                if ($top_banner['open_modal_btn']){
+                    $attributes = 'data-fancybox';
+                } else {
+                    $attributes = $bottom_banner['button']['target'] ? 'target="'.$bottom_banner['button']['target'].'"' : ' ';
+                } ?>
                 <a
                         href="<?= $top_banner['button']['url']?>"
                         class="btn banner__button btn--transparent"
-                    <?= $top_banner['button']['target'] ? 'target="'.$top_banner['button']['target'].'"' : ' '?>
+                    <?= $attributes?>
                 >
                     <?= $top_banner['button']['title']?>
                 </a>
@@ -24,4 +30,8 @@
             <img src="<?= $top_banner['background']?>" class="banner__bg" alt="">
         <?php endif; ?>
     </section>
+
+    <?php if ($bottom_banner['open_modal_btn']):
+        get_template_part('template-parts/modal-form');
+    endif; ?>
 <?php endif; ?>

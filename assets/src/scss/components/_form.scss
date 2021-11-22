@@ -1,4 +1,9 @@
 .form {
+  &--contact {
+    background: #fff;
+    padding: 100px 0;
+  }
+
   &__wrapper {
     max-width: 1060px;
 
@@ -97,4 +102,9 @@
       }
     }
   }
+}
+
+// fix select in CF7
+.wpcf7-form-control-wrap {
+  position: initial;
 }
