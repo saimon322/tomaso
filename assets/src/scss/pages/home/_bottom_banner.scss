@@ -9,7 +9,10 @@
   &__content {
     max-width: 980px;
     margin: auto;
-    padding-top: 60px;
+    padding-top: 100px;
+    @include media-up(lg) {
+      padding-top: 85px;
+    }
   }
 
   &__title {

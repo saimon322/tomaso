@@ -1,20 +1,11 @@
 .farm__slider {
     background: #fff;
-    padding-top: 30px;
 
     @include media-up(lg) {
-        padding-top: 60px;
         background: $color-white-1;
     }
 
     .about--slider {
-        &_wrapper {
-            margin-top: 20px;
-            @include media-up(lg) {
-                margin-top: 60px;
-            }
-        }
-
         &__pagination {
             margin-top: 40px;
         }
