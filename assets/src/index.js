@@ -9,3 +9,4 @@ import './js/vh-fix';
 import './js/nav';
 import './js/sliders';
 import './js/fancyboxes';
+import './js/custom-select';

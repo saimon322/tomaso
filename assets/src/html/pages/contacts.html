@@ -18,6 +18,14 @@
 
     <%=_.template(require('../templates/home/where_buy.html'))() %>
 
+    <%=_.template(require('../templates/fancybox/fancymaps.html'))() %>
+
+    <%=_.template(require('../templates/contacts/form.html'))({
+        formTitle: 'Связаться с нами',
+        select: true,
+        textarea: true
+    }) %>
+
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>

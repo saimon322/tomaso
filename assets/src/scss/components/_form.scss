@@ -1,0 +1,99 @@
+.form {
+  &__wrapper {
+    max-width: 1060px;
+
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-black;
+    margin-bottom: 30px;
+
+    @include media-up(md) {
+      font-size: 28px;
+      line-height: 143%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__row {
+    width: 100%;
+
+    @include media-up(md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 23px;
+
+      &:not(:nth-child(2)) {
+        div, p {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+      }
+    }
+
+    p {
+      width: 100%;
+    }
+
+    span.caption,
+    label {
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: 0.02em;
+      color: $color-dark;
+
+      @include media-up(md) {
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+
+    textarea,
+    input {
+      height: initial;
+      font-size: 17px;
+      line-height: 28px;
+      color: #000;
+      padding: 12px 16px;
+      margin-top: 4px;
+      margin-bottom: 20px;
+      background: #FFFFFF;
+      border: 0.5px solid rgba(0, 0, 0, 0.2);
+
+      @include media-up(md) {
+        margin-top: 6px;
+        margin-bottom: 30px;
+      }
+
+      @include placeholder {
+        opacity: .3;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 113px;
+
+      @include media-up(md) {
+        height: 135px;
+      }
+    }
+
+    input[type="submit"] {
+      padding: 17px 17px 18px;
+      color: #F2F1F0;
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: #209C3C;
+      margin-bottom: 40px;
+
+      @include media-up(md) {
+        padding: 18px 65px;;
+      }
+    }
+  }
+}

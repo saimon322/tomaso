@@ -1,0 +1,78 @@
+<div class="form fancyform" id="form-modal">
+
+    <div class="fancyform__modal-logo">
+        <svg width="80" height="27">
+            <use xlink:href="#logo_text"></use>
+        </svg>
+        <svg width="65" height="30">
+            <use xlink:href="#logo"></use>
+        </svg>
+    </div>
+
+    <div class="container fancyform__wrapper">
+        <div class="form__content">
+            <h2 class="form__title fancyform__title"><%= formTitle%></h2>
+            <form action="#">
+                <div class="form__row">
+                    <p>
+                        <label>Ваше имя*<br>
+                            <span class="wpcf7-form-control-wrap your-email">
+                        <input type="text" name="your-name" value="" class="wpcf7-form-control" placeholder="Имя">
+                    </span>
+                        </label>
+                    </p>
+                </div>
+                <div class="form__row">
+                    <p>
+                        <label>Телефон*<br>
+                            <span class="wpcf7-form-control-wrap your-email">
+                        <input type="number" name="your-phone" value="" class="wpcf7-form-control" placeholder="Телефон">
+                    </span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>E-mail*<br>
+                            <span class="wpcf7-form-control-wrap your-email">
+                        <input type="email" name="your-mail" value="" class="wpcf7-form-control" placeholder="E-mail">
+                    </span>
+                        </label>
+                    </p>
+                </div>
+
+                <%if (select) {%>
+                <div class="form__row">
+                    <div class="custom-select">
+                        <span class="caption">Тип сотрудничества*</span>
+                        <select>
+                            <option value="1">Франчайзинг Системы Тимошовка</option>
+                            <option value="2">Франчайзинг Системы Тимошовка 2</option>
+                            <option value="3">Франчайзинг Системы Тимошовка 3</option>
+                            <option value="4">Франчайзинг Системы Тимошовка 4</option>
+                        </select>
+                    </div>
+                </div>
+                <%}%>
+
+                <%if (textarea) {%>
+                <div class="form__row">
+                    <p>
+                        <label> Ваше сообщение<br>
+                            <span class="wpcf7-form-control-wrap your-message">
+                        <textarea name="your-message" class="wpcf7-form-control" placeholder="Сообщение"></textarea>
+                    </span>
+                        </label>
+                    </p>
+                </div>
+                <%}%>
+
+                <div class="form__row">
+                    <p>
+                        <input type="submit" value="Отправить" class="wpcf7-form-control btn btn--green btn--center">
+                        <span class="wpcf7-spinner"></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

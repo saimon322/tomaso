@@ -78,6 +78,11 @@
         image_link: "img/base/bottom-banner--bg-1.jpg",
     }) %>
 
+    <%=_.template(require('../templates/fancybox/fancyform.html'))({
+    formTitle: 'СТАТЬ ПАРТНЕРОМ',
+    select: true,
+    textarea: true
+    }) %>
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>
