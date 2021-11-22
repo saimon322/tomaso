@@ -1,4 +1,5 @@
 <?php $footer_settings = get_field('footer_settings','option');?>
+<?php $contacts_data = get_field('contacts_data','option');?>
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
@@ -20,11 +21,11 @@
 
             <div class="footer__contacts">
                 <div class="footer__links">
-                    <?php if (!empty($footer_settings['phone_number'])): ?>
-                        <a href="tel:<?= $footer_settings['phone_number']?>"><?= $footer_settings['phone_number']?></a>
+                    <?php if (!empty($contacts_data['phone_number'])): ?>
+                        <a href="tel:<?= $contacts_data['phone_number']?>"><?= $contacts_data['phone_number']?></a>
                     <?php endif; ?>
-                    <?php if (!empty($footer_settings['email'])): ?>
-                        <a href="mailto:<?= $footer_settings['email']?>"><?= $footer_settings['email']?></a>
+                    <?php if (!empty($contacts_data['email'])): ?>
+                        <a href="mailto:<?= $contacts_data['email']?>"><?= $contacts_data['email']?></a>
                     <?php endif; ?>
                 </div>
 

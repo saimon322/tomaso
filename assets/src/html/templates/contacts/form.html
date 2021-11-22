@@ -1,35 +1,29 @@
-<div class="form">
+<section class="form form--contact">
     <div class="container form__wrapper">
         <h2 class="form__title"><%= formTitle%></h2>
         <form action="#">
-            <div class="form__row">
-                <p>
-                    <label>Ваше имя*<br>
-                        <span class="wpcf7-form-control-wrap your-email">
+            <div class="form__row form__row-full">
+                <label>Ваше имя*<br>
+                    <span class="wpcf7-form-control-wrap your-email">
                         <input type="text" name="your-name" value="" class="wpcf7-form-control" placeholder="Имя">
                     </span>
-                    </label>
-                </p>
+                </label>
             </div>
             <div class="form__row">
-                <p>
-                    <label>Телефон*<br>
-                        <span class="wpcf7-form-control-wrap your-email">
+                <label>Телефон*<br>
+                    <span class="wpcf7-form-control-wrap your-email">
                         <input type="number" name="your-phone" value="" class="wpcf7-form-control" placeholder="Телефон">
                     </span>
-                    </label>
-                </p>
-                <p>
-                    <label>E-mail*<br>
-                        <span class="wpcf7-form-control-wrap your-email">
+                </label>
+                <label>E-mail*<br>
+                    <span class="wpcf7-form-control-wrap your-email">
                         <input type="email" name="your-mail" value="" class="wpcf7-form-control" placeholder="E-mail">
                     </span>
-                    </label>
-                </p>
+                </label>
             </div>
 
             <%if (select) {%>
-            <div class="form__row">
+            <div class="form__row form__row-full">
                 <div class="custom-select">
                     <span class="caption">Тип сотрудничества*</span>
                     <select>
@@ -43,23 +37,19 @@
             <%}%>
 
             <%if (textarea) {%>
-            <div class="form__row">
-                <p>
-                    <label> Ваше сообщение<br>
-                        <span class="wpcf7-form-control-wrap your-message">
+            <div class="form__row form__row-full">
+                <label> Ваше сообщение<br>
+                    <span class="wpcf7-form-control-wrap your-message">
                         <textarea name="your-message" class="wpcf7-form-control" placeholder="Сообщение"></textarea>
                     </span>
-                    </label>
-                </p>
+                </label>
             </div>
             <%}%>
 
-            <div class="form__row">
-                <p>
-                    <input type="submit" value="Отправить" class="wpcf7-form-control btn btn--green btn--center">
-                    <span class="wpcf7-spinner"></span>
-                </p>
+            <div class="form__row form__row-full">
+                <input type="submit" value="Отправить" class="wpcf7-form-control btn btn--green btn--center">
+                <span class="wpcf7-spinner"></span>
             </div>
         </form>
     </div>
-</div>
+</section>

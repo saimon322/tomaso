@@ -54,6 +54,10 @@
         right: 0;
         z-index: 10;
 
+        @include media-up(md) {
+            top: calc(100% - 30px);
+        }
+
         .select-item {
             padding: 14px 16px;
             cursor: pointer;
