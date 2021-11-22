@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --config webpack.dev.js",
+    "start": "webpack-dev-server --open --hot --mode development --config webpack.dev.js",
+    "safari-start": "webpack-dev-server --open --hot --host 0.0.0.0 --port 3000 --mode development --config webpack.dev.js",
     "build": "webpack --mode production --config webpack.prod.js",
     "watch": "webpack --watch"
   },

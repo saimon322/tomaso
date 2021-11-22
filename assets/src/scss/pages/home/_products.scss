@@ -25,8 +25,8 @@
     &_slider {
         margin-top: 31px;
         @include media-up(md) {
-            margin-top: 25px;
-            padding: 6px;
+            margin-top: 80px;
+            padding: 0 6px;
             overflow: hidden;
         }
     }
@@ -59,6 +59,12 @@
         font-size: 16px;
         line-height: 24px;
         color: #030E05;
+
+        @include media-up(lg) {
+            font-size: 20px;
+            line-height: 30px;
+            margin-top: 33px;
+        }
     }
 
     &_navigation {
@@ -67,6 +73,10 @@
         justify-content: space-between;
         position: relative;
         bottom: 130px;
+
+        @include media-up(lg) {
+            bottom: 155px;
+        }
     }
 
     &_arrow {
