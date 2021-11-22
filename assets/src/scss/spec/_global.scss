@@ -66,14 +66,14 @@ h5 {
 
 .section-title {
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 167%;
   text-transform: uppercase;
   color: $color-black;
   margin-top: 10px;
 
   @include media-up(lg) {
     font-size: 28px;
-    line-height: 1.43;
+    line-height: 143%;
   }
 
   span {

@@ -52,6 +52,10 @@
 
       &-wrapper {
         height: 538px;
+
+        @include media-up(lg) {
+          height: 597px;
+        }
       }
 
       &-slide {

@@ -21,6 +21,7 @@
       grid-template-columns: 1fr 1fr;
     }
     @include media-up(lg) {
+      padding: 0;
       margin: 50px 0 60px 0;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -39,6 +40,10 @@
       border: 1px solid #D8EADC;
       min-height: 147px;
 
+      @include media-up(lg) {
+        min-height: 166px;
+      }
+
       img {
         margin: auto;
         object-fit: contain;
@@ -47,10 +52,14 @@
 
     &-link {
       display: inline-block;
-      margin: 10px auto;
+      margin: 10px auto 0 auto;
       text-decoration: none;
       color: $color-dark;
       position: relative;
+
+      @include media-up(lg) {
+        margin: 27px auto 0 auto;
+      }
 
       &:after {
         content: '';
