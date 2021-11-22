@@ -22,10 +22,11 @@ function optionsFunc(sliderPref) {
     let optionsParams = {
         loop: true,
         speed: 500,
-        direction: 'vertical',
+        direction: 'horizontal',
         slidesPerView: 'auto',
         centeredSlides: true,
-        // autoHeight: true,
+        spaceBetween: 10,
+        navigation: false,
 
         pagination: {
             el: '.main-vertical-'+sliderPref+'__pagination',
@@ -34,21 +35,14 @@ function optionsFunc(sliderPref) {
                 return '<span class="' + className + '"></span>';
             },
         },
-        navigation: {
-            nextEl: '.main-vertical-'+sliderPref+'__next',
-            prevEl: '.main-vertical-'+sliderPref+'__prev',
-        },
+        
         breakpoints: {
-            0: {
-                direction: 'horizontal',
-                spaceBetween: 10,
-                slidesPerView: 'auto',
-                centeredSlides: true,
-                autoHeight: true,
-                navigation: false,
-            },
             768: {
                 direction: 'vertical',
+                navigation: {
+                    nextEl: '.main-vertical-'+sliderPref+'__next',
+                    prevEl: '.main-vertical-'+sliderPref+'__prev',
+                },
             }
         },
 
