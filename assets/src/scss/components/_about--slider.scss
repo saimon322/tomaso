@@ -2,15 +2,14 @@
     &_wrapper {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 20px;
-        margin-bottom: 97px;
         width: calc(100% - 30px);
 
         @include media-up(lg) {
             transition: opacity .5s;
             opacity: 0;
             flex-direction: row;
-            margin: 105px auto;
+            padding-top: 114px;
+            padding-bottom: 114px;
 
             &.swiper-slide-active {
                 opacity: 1;
