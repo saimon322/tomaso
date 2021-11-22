@@ -54,6 +54,12 @@
 
     <%=_.template(require('../templates/excursion/booking.html'))() %>
 
+    <%=_.template(require('../templates/fancybox/fancyform.html'))({
+    formTitle: 'Забронировать экскурсию на ферму',
+    select: '',
+    textarea: ''
+    }) %>
+
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>
