@@ -36,7 +36,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 120px;border-radius: 100%;
+        width: 120px;
+        border-radius: 100%;
 
         @include media-up(lg) {
             width: 160px;
@@ -44,13 +45,19 @@
     }
 
     &_image {
-        border-radius: 100%;
         transition: outline-color .25s;
-        outline: 6px;
-        outline-style: solid;
-        outline-color: transparent;
-        &:hover {
-            outline-color: #fff;
+        border-radius: 100%;
+        width: 120px;
+        height: 120px;
+
+        @include media-up(lg) {
+            border: 6px transparent solid;
+            transition: border-color .25s;
+            &:hover {
+                border-color: #fff;
+            }
+            width: 160px;
+            height: 160px;
         }
     }
 
