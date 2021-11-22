@@ -13,7 +13,7 @@
         <div class="form__content">
             <h2 class="form__title fancyform__title"><%= formTitle%></h2>
             <form action="#">
-                <div class="form__row">
+                <div class="form__row form__row-full">
                     <p>
                         <label>Ваше имя*<br>
                             <span class="wpcf7-form-control-wrap your-email">
@@ -40,7 +40,7 @@
                 </div>
 
                 <%if (select) {%>
-                <div class="form__row">
+                <div class="form__row form__row-full">
                     <div class="custom-select">
                         <span class="caption">Тип сотрудничества*</span>
                         <select>
@@ -54,7 +54,7 @@
                 <%}%>
 
                 <%if (textarea) {%>
-                <div class="form__row">
+                <div class="form__row form__row-full">
                     <p>
                         <label> Ваше сообщение<br>
                             <span class="wpcf7-form-control-wrap your-message">
@@ -65,7 +65,7 @@
                 </div>
                 <%}%>
 
-                <div class="form__row">
+                <div class="form__row form__row-full">
                     <p>
                         <input type="submit" value="Отправить" class="wpcf7-form-control btn btn--green btn--center">
                         <span class="wpcf7-spinner"></span>

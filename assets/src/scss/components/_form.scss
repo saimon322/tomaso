@@ -1,4 +1,9 @@
 .form {
+  &--contact {
+    background: #fff;
+    padding: 100px 0;
+  }
+
   &__wrapper {
     max-width: 1060px;
 
@@ -27,8 +32,9 @@
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 23px;
 
-      &:not(:nth-child(2)) {
-        div, p {
+      &-full {
+
+        > * {
           grid-column-start: 1;
           grid-column-end: 3;
         }
@@ -96,4 +102,9 @@
       }
     }
   }
+}
+
+// fix select in CF7
+.wpcf7-form-control-wrap {
+  position: initial;
 }
