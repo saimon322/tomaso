@@ -1,6 +1,6 @@
 .meat_about {
-  margin-top: 30px;
-  margin-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 100px;
 
   &__wrapper {
     display: flex;
@@ -74,7 +74,8 @@
   }
 
   @include media-up(lg) {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: #F8F8F8;
   }
 }

@@ -1,7 +1,7 @@
 .about {
-    margin-top: 30px;
+    padding-top: 30px;
     @include media-up(lg) {
-        margin: 105px auto;
+        padding: 120px 0;
     }
 
     &_wrapper {
@@ -22,8 +22,8 @@
         max-width: 100vw;
 
         @include media-up(md) {
-            margin-left: -15px;
-            margin-bottom: -15px;
+            margin-left: -30px;
+            margin-bottom: -30px;
         }
 
         @include media-up(lg) {
