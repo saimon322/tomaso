@@ -1,6 +1,6 @@
 <?php $bottom_banner = get_field('bottom_banner'); ?>
 <?php if ($bottom_banner): ?>
-    <section class="banner bottom-banner">
+    <section class="banner bottom-banner <?= $args['class'] ? $args['class'] : ''?>">
         <div class="container bottom-banner__container">
 
             <div class="bottom-banner__content">

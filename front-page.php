@@ -4,7 +4,7 @@ get_header();?>
     <main class="main">
 
         <?php
-        get_template_part('template-parts/main-banner');
+        get_template_part('template-parts/main-banner', '', array('banner_class' => 'banner--big'));
 
         get_template_part('template-parts/front-page/meat-about');
 
