@@ -3,7 +3,7 @@
     <section class="culture">
         <div class="container culture__wrapper">
             <?php if ($culture['image']): ?>
-                <img src="<?= $culture['image']?>" alt="" class="culture__image">
+                <img src="<?= $culture['image']?>" alt="<?= $culture['image']['alt']?>" class="culture__image">
             <?php endif; ?>
             <div class="culture__content">
 

@@ -4,7 +4,7 @@
     <div class="damage">
         <div class="container damage__wrapper">
             <?php if ($antibiotics_harm['image']): ?>
-                <img src="<?= $antibiotics_harm['image']?>" alt="" class="damage__image">
+                <img src="<?= $antibiotics_harm['image']['url']?>" alt="<?= $antibiotics_harm['image']['alt']?>" class="damage__image">
             <?php endif; ?>
             <div class="damage__content">
                 <?php if ($antibiotics_harm['subtitle']): ?>

@@ -31,7 +31,7 @@
 
         <div class="container about_wrapper">
             <?php if ($about_us['image']): ?>
-                <img src="<?= $about_us['image']?>" alt="" class="about_image<?= $classes['image']?>">
+                <img src="<?= $about_us['image']['url']?>" alt="<?= $about_us['image']['alt']?>" class="about_image<?= $classes['image']?>">
             <?php endif; ?>
             <div class="about_content<?= $classes['content']?>">
                 <?php if (!$about_us['titles_top']): ?>

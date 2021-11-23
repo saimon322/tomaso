@@ -23,7 +23,7 @@
                         <div class="container about--slider_wrapper swiper-slide">
 
                             <?php if ($slide['image']): ?>
-                                <img src="<?= $slide['image']?>" alt="" class="about--slider__image">
+                                <img src="<?= $slide['image']['url']?>" alt="<?= $slide['image']['alt']?>" class="about--slider__image">
                             <?php endif; ?>
 
                             <div class="about--slider__content about--slider__content--center">
@@ -35,7 +35,7 @@
                                 <?php endif; ?>
 
                                 <?php if ($slide['image']): ?>
-                                    <img src="<?= $slide['image']?>" alt="" class="about--slider__content-image">
+                                    <img src="<?= $slide['image']['url']?>" alt="<?= $slide['image']['alt']?>" class="about--slider__content-image">
                                 <?php endif; ?>
 
                                 <?php if ($slide['text']): ?>
