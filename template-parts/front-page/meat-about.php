@@ -4,7 +4,7 @@
     <div class="container meat_about__wrapper">
         
         <?php if ($meat_about['image']): ?>
-        <img src="<?= $meat_about['image']?>" alt="" class="meat_about__image">
+        <img src="<?= $meat_about['image']['url']?>" alt="<?= $meat_about['image']['alt']?>" class="meat_about__image">
         <?php endif; ?>
 
         <div class="meat_about__content">

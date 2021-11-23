@@ -18,7 +18,7 @@
         <div class="meat_about__wrapper antibio-resist__wrapper">
 
             <?php if ($antibio_resist['image']): ?>
-                <img src="<?= $antibio_resist['image']?>" alt="" class="meat_about__image antibio-resist__image">
+                <img src="<?= $antibio_resist['image']['url']?>" alt="<?= $antibio_resist['image']['alt']?>" class="meat_about__image antibio-resist__image">
             <?php endif; ?>
 
             <div class="meat_about__content container antibio-resist__content">

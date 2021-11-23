@@ -1,6 +1,6 @@
 <?php $top_banner = get_field('top_banner'); ?>
 <?php if ($top_banner): ?>
-    <section class="banner <?= $args['banner_class'] ? $args['banner_class'] : 'banner--big'?>">
+    <section class="banner <?= $args['banner_class'] ? $args['banner_class'] : ''?>">
         <div class="container banner__container">
             <div class="banner__content">
                 <?php if ($top_banner['title']): ?>
