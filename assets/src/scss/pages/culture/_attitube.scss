@@ -1,16 +1,38 @@
 .attitude {
   background: $color-white-1;
-  padding: 85px 0;
+  padding: 30px 0;
+
+  @include media-up(lg) {
+    padding: 81px 0 86px 0;
+  }
 
   h2 {
     max-width: 940px;
     margin-right: auto;
     margin-left: auto;
+
+    @include media-down(lg) {
+      text-align: left;
+    }
+  }
+
+  .section-subtitle {
+    text-align: left;
+
+    @include media-up(lg) {
+      text-align: center;
+    }
   }
 
   &__block {
-    margin: 30px 0;
+    margin: 30px -12px;
     padding-top: 1px;
+
+    @include media-up(md) {
+      margin: 74px -30px 60px -30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     .swiper-wrapper {
       height: 254px;
@@ -42,6 +64,8 @@
       height: 1px;
       background: $color-black;
     }
+
+    
   }
 
   &__item-image {

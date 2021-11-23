@@ -37,6 +37,7 @@
 
     &__wrapper {
         height: calc(100vh - 300px);
+        height: calc(var(--vh, 100vh) * 100 - 300px);
         @include media-up(lg) {
             height: auto;
             max-width: calc(80vw - 156px);
@@ -47,6 +48,7 @@
         iframe {
             width: 100vw;
             height: calc(100vh - 300px);
+            height: calc(var(--vh, 100vh) * 100 - 300px);
 
             @include media-up(lg) {
                 width: 100%;

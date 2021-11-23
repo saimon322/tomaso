@@ -162,7 +162,8 @@
     }
     
     &__pagination {
-        margin-top: 89px;
+        margin-top: 89px !important;
+        margin-bottom: 20px !important;
         display: flex;
         justify-content: space-between;
         .swiper-pagination-bullet {

@@ -11,6 +11,10 @@
     @include media-down(lg) {
       margin-left: 0;
     }
+
+    @include media-up(lg) {
+      padding-top: 18px;
+    }
   }
 
   &__image {

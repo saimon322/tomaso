@@ -2,6 +2,7 @@ const mainNavInit = () => {
     const $header = document.querySelector('.header');
     const $navButton = document.querySelector('.hamburger');
     const $nav = document.querySelector(".header__nav");
+    const bp992 = window.matchMedia('(min-width: 992px)');
 
     const menuClass = 'show-menu';
     const items = $nav.querySelectorAll(".nav__list > li");
@@ -9,12 +10,12 @@ const mainNavInit = () => {
     for (const item of items) {
         const $submenu = item.querySelector("ul")
 
-        if($submenu) {
+        if($submenu && bp992) {
             item.addEventListener("click", (e) => {
                 item.classList.toggle("submenu-open");
                 let submenuItem = item.querySelector("ul");
                 if (item.classList.contains("submenu-open")) {
-                    submenuItem.style.maxHeight = 500 + 'px';
+                    submenuItem.style.maxHeight = submenuItem.scrollHeight + 'px';
                 } else {
                     submenuItem.style.maxHeight = 0 + 'px';
                 }
