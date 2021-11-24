@@ -2,7 +2,7 @@
 /*
 * Template Name: Экскурсия на ферму
 */
-get_header(); ?>
+get_header('', array('header_class' => 'header--black')); ?>
 <main class="main">
 
     <?php

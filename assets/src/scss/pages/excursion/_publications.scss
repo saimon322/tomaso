@@ -71,4 +71,46 @@
         }
     }
 
+    &--up {
+        background: $color-white-1;
+
+        @include media-up(lg) {
+            padding-bottom: 70px;
+        }
+
+        .publications__wrapper {
+
+            @include media-up(lg) {
+                padding: 60px;
+                background: #F8F8F8;
+                position: relative;
+                top: -245px;
+                margin-bottom: -245px;
+            }
+        }
+
+        .publications__title {
+            margin-bottom: 15px;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #030E05;
+
+            @include media-up(lg) {
+                font-size: 45px;
+                line-height: 66px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .publications__link {
+            @include media-up(lg) {
+                &:first-child {
+                    border-top: 0;
+                }
+            }
+        }
+    }
 }
