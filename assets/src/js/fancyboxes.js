@@ -1,6 +1,6 @@
 import { Fancybox } from "@fancyapps/ui";
 
-const fancyLinkForms = document.querySelectorAll("a[href='#form']");
+const fancyLinkForms = document.querySelectorAll("a[href^='#form']");
 for (const item of fancyLinkForms) {
     item.setAttribute('data-fancybox', '');
 }
