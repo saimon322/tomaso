@@ -1,4 +1,5 @@
-<?php $contacts_data = get_field('contacts_data','option'); ?>
+<?php $contacts_data = get_field('contacts_data');?>
+<?php $footer_settings = get_field('footer_settings', 'option');?>
 <?php if ($contacts_data): ?>
     <section class="contacts">
         <div class="container contacts__container">
@@ -11,7 +12,7 @@
             <?php endif; ?>
 
             <div class="contacts__data">
-                <?php if ($contacts_data['phone_number']): ?>
+                <?php if ($contacts_data['addresses']): ?>
                     <?php foreach ($contacts_data['addresses'] as $addresses): ?>
 
                         <div class="contacts__place">
@@ -28,12 +29,12 @@
                 <?php endif; ?>
                 <div class="contacts__callback">
 
-                    <?php if ($contacts_data['phone_number']): ?>
-                        <a href="tel:<?= $contacts_data['phone_number']?>" class="contacts__callback--phone"><?= $contacts_data['phone_number']?></a>
+                    <?php if ($footer_settings['phone_number']): ?>
+                        <a href="tel:<?= $footer_settings['phone_number']?>" class="contacts__callback--phone"><?= $footer_settings['phone_number']?></a>
                     <?php endif; ?>
 
-                    <?php if ($contacts_data['email']): ?>
-                        <a href="mailto:<?= $contacts_data['email']?>" class="contacts__callback--email"><?= $contacts_data['email']?></a>
+                    <?php if ($footer_settings['email']): ?>
+                        <a href="mailto:<?= $footer_settings['email']?>" class="contacts__callback--email"><?= $footer_settings['email']?></a>
                     <?php endif; ?>
 
                 </div>
