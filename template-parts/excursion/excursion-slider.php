@@ -1,5 +1,5 @@
 <?php $excursion_slider = get_field('excursion_slider'); ?>
-<?php if ($excursion_slider['slider']): ?>
+<?php if (!empty($excursion_slider['slider'])): ?>
 <div class="excursion-slider">
     <div class="container excursion-slider__wrapper">
         <div class="exursion-slider__left">

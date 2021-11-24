@@ -1,15 +1,12 @@
-<?php $section_green = get_field('section-green' . ($args['n'] ? $args['n'] : ''));
-
-$classes = '';
-if ($args['n']) {
-    $classes = 'banner-green--small-padding';
-}
-if ($section_green['show_blocks']) {
-    $classes .= ' banner-green--two-blocks';
-}
-
-?>
-<?php if ($section_green): ?>
+<?php $section_green = get_field('section-green' . ($args['n'] ? $args['n'] : '')); ?>
+<?php if ($section_green):
+    $classes = '';
+    if ($args['n']) {
+        $classes = 'banner-green--small-padding';
+    }
+    if ($section_green['show_blocks']) {
+        $classes .= ' banner-green--two-blocks';
+    }?>
     <section class="banner-green <?= $classes?>">
 
         <?php if ($section_green['top_subtitle']): ?>

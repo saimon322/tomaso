@@ -12,8 +12,9 @@ if ( ! function_exists('theme_setup')) :
         
         register_nav_menus(
             array(
-                'header-menu' => esc_html__('Header', 'theme'),
-                'footer-menu' => esc_html__('Footer', 'theme'),
+                'header-menu'   => esc_html__('Header', 'theme'),
+                'footer-menu'   => esc_html__('Footer', 'theme'),
+                'language-menu' => esc_html__('language', 'theme'),
             )
         );
         
