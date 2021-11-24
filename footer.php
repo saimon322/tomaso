@@ -55,6 +55,8 @@
     </div>
 </footer>
 
+<?php get_template_part('template-parts/popup/modal-form'); ?>
+
 <?php wp_footer(); ?>
 </body>
 </html>

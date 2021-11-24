@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="header">
+<header class="header <?=$args['header_class'] ? $args['header_class'] : ''?>">
     <div class="container">
         <div class="header__content">
             <a href="/" class="header__logo">
