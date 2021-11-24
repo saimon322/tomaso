@@ -10,14 +10,16 @@ const mainNavInit = () => {
     for (const item of items) {
         const $submenu = item.querySelector("ul")
 
-        if($submenu && bp992) {
+        if($submenu) {
             item.addEventListener("click", (e) => {
-                item.classList.toggle("submenu-open");
-                let submenuItem = item.querySelector("ul");
-                if (item.classList.contains("submenu-open")) {
-                    submenuItem.style.maxHeight = submenuItem.scrollHeight + 'px';
-                } else {
-                    submenuItem.style.maxHeight = 0 + 'px';
+                if (!bp992.matches) {
+                    item.classList.toggle("submenu-open");
+                    let submenuItem = item.querySelector("ul");
+                    if (item.classList.contains("submenu-open")) {
+                        submenuItem.style.maxHeight = submenuItem.scrollHeight + 'px';
+                    } else {
+                        submenuItem.style.maxHeight = 0 + 'px';
+                    }
                 }
             })
         }
