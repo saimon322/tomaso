@@ -51,15 +51,15 @@
     }
 
     @include media-up(lg) {
-
-      padding: 33px 61px 31px 69px;
+      margin-right: 20px;
+      padding: 33px 20px 31px 20px;
       border-left: 1px solid rgba(255, 255, 255, 0.3);
       border-right: 1px solid rgba(255, 255, 255, 0.3);
 
       svg:first-child {
         width: 121px;
         height: 30px;
-        margin-right: 73px;
+        margin-right: 16px;
         margin-bottom: 4px;
       }
 
@@ -67,6 +67,10 @@
         width: 88px;
         height: 41px;
       }
+    }
+
+    @include media-up(xl) {
+      padding: 33px 61px 31px 69px;
     }
 
   }
