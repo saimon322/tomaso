@@ -1,4 +1,8 @@
-<?php $top_banner = get_field('top_banner'); ?>
+<?php $top_banner = get_field('top_banner'); 
+print_r('<pre>');
+print_r($top_banner);
+print_r('</pre>');
+?>
 <?php if ($top_banner): ?>
     <section class="banner <?= $args['banner_class'] ? $args['banner_class'] : ''?>">
         <div class="container banner__container">
@@ -10,7 +14,7 @@
                     <div class="banner__text"><?= $top_banner['subtitle']?></div>
                 <?php endif; ?>
             </div>
-            <?php if ($top_banner['button']):
+            <?php if ($top_banner['show_btn'] && $top_banner['button']):
                 $attributes = '';
                 if ($top_banner['open_modal_btn']){
                     $attributes = 'data-fancybox';
@@ -32,6 +36,6 @@
     </section>
 
     <?php if ($bottom_banner['open_modal_btn']):
-        get_template_part('template-parts/modal-form');
+//        get_template_part('template-parts/modal-form');
     endif; ?>
 <?php endif; ?>

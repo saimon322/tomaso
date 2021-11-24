@@ -36,7 +36,7 @@
     </section>
 
     <?php if ($bottom_banner['open_modal_btn']):
-        get_template_part('template-parts/modal-form');
+//        get_template_part('template-parts/modal-form');
     endif; ?>
 
 <?php endif; ?>
