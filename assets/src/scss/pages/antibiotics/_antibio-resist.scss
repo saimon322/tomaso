@@ -3,18 +3,29 @@
     margin-top: 0;
     margin-bottom: 0;
 
+    padding-top: 40px;
+    padding-bottom: 0px;
+
+    @include media-up(lg) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column-reverse;
         @include media-up(lg) {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 1fr;
             gap: 95px;
         }
     }
 
     &__content {
         @include media-up(lg) {
+            padding-top: 99px;
+            padding-bottom: 94px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -36,7 +47,8 @@
         }
 
         @include media-up(lg) {
-            height: 780px;
+            max-height: 100%;
+            height: 874px;
             margin-top: 0px;
         }
     }

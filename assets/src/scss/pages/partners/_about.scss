@@ -1,0 +1,15 @@
+.partners-about {
+    padding-bottom: 30px;
+    
+    .about_image {
+        display: none;
+    }
+
+    @include media-up(lg) {
+        padding-bottom: 120px;
+
+        .about_image {
+            display: block;
+        }
+    }
+}

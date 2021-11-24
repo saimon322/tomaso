@@ -17,10 +17,13 @@
     <%=_.template(require('../templates/home/meat_about.html'))() %>
 
     <%=_.template(require('../templates/home/products.html'))({
+        classSection: "",
         slidesWeb: "6",
     }) %>
 
-    <%=_.template(require('../templates/home/where_buy.html'))() %>
+    <%=_.template(require('../templates/home/where_buy.html'))({
+        sectionClass: "",
+    }) %>
 
     <%=_.template(require('../templates/fancybox/fancymaps.html'))() %>
 

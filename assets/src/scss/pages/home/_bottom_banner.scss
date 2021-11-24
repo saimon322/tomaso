@@ -1,6 +1,10 @@
 .bottom-banner {
+  text-align: center;
+  position: relative;
+  height: 675px;
+
   @include media-up(lg) {
-    height: 910px;
+    height: 921px;
   }
   &__container {
     height: 100%;
