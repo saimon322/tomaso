@@ -30,6 +30,13 @@
                         'container'      => '',
                         'walker'         => new HeaderWalker(),
                         ) );
+                    // Primary navigation menu.
+                    wp_nav_menu( array(
+                        'menu_class'     => 'nav__list',
+                        'theme_location' => 'language-menu',
+                        'container'      => '',
+                        'walker'         => new HeaderWalker(),
+                        ) );
                     ?>
                 </nav><!-- .main-navigation -->
             <?php endif; ?>
