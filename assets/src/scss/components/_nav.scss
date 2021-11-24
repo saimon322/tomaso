@@ -15,6 +15,10 @@
   }
 
   @include media-up(lg) {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    overflow: visible;
     position: relative;
     transform: translateX(0);
     padding: 0;
@@ -29,7 +33,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0 0 38px;
+        margin: 0 0 0 22px;
+
+        @include media-up(xl) {
+          margin: 0 0 0 38px;
+        }
         
         ul {
           position: absolute;
@@ -108,12 +116,15 @@
           margin-left: 8px;
           color: #fff;
           transition: .25s;
-        }
 
-        @include media-up(lg) {
-           svg {
-             top: 0;
-           }
+          @include media-up(lg) {
+            top: 0;
+            margin-left: 4px;
+          }
+
+          @include media-up(xl) {
+            margin-left: 8px;
+          }
         }
       }
 
