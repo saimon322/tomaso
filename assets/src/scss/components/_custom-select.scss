@@ -7,6 +7,7 @@
     }
 
     .select-selected {
+        position: relative;
         cursor: pointer;
         background-color: #fff;
         padding: 12px 16px;
@@ -22,7 +23,7 @@
         &:after {
             position: absolute;
             content: none;
-            top: 48px;
+            top: 20px;
             right: 16px;
             width: 8px;
             height: 10px;

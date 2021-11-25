@@ -1,7 +1,10 @@
-<?php $popup_forms = get_field('popup_forms','option');?>
+<?php
+$current_lang = pll_current_language() ? pll_current_language() : 'ru';
+$popup_forms = get_field('popup_forms','option');
+?>
 <?php if ($popup_forms): ?>
 
-    <?php if ($popup_forms['partners_shortcode']): ?>
+    <?php if ($popup_forms['partners_shortcode_'.$current_lang]): ?>
         <div class="form fancyform" id="form-partners">
 
             <div class="fancyform__modal-logo">
@@ -15,18 +18,18 @@
 
             <div class="container fancyform__wrapper">
                 <div class="form__content">
-                    <?php if ($popup_forms['partners_title']): ?>
-                        <h2 class="form__title fancyform__title"><?= $popup_forms['partners_title']?></h2>
+                    <?php if ($popup_forms['partners_title_'.$current_lang]): ?>
+                        <h2 class="form__title fancyform__title"><?= $popup_forms['partners_title_'.$current_lang]?></h2>
                     <?php endif; ?>
 
-                    <?= do_shortcode($popup_forms['partners_shortcode'])?>
+                    <?= do_shortcode($popup_forms['partners_shortcode_'.$current_lang])?>
                 </div>
             </div>
 
         </div>
     <?php endif; ?>
 
-    <?php if ($popup_forms['excursion_shortcode']): ?>
+    <?php if ($popup_forms['excursion_shortcode_'.$current_lang]):?>
 
         <div class="form fancyform" id="form-excursion">
 
@@ -41,11 +44,11 @@
 
             <div class="container fancyform__wrapper">
                 <div class="form__content">
-                    <?php if ($popup_forms['excursion_title']): ?>
-                        <h2 class="form__title fancyform__title"><?= $popup_forms['excursion_title']?></h2>
+                    <?php if ($popup_forms['excursion_title_'.$current_lang]): ?>
+                        <h2 class="form__title fancyform__title"><?= $popup_forms['excursion_title_'.$current_lang]?></h2>
                     <?php endif; ?>
 
-                    <?= do_shortcode($popup_forms['excursion_shortcode'])?>
+                    <?= do_shortcode($popup_forms['excursion_shortcode_'.$current_lang])?>
                 </div>
             </div>
 

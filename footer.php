@@ -28,8 +28,12 @@
                     <?php endif; ?>
                 </div>
 
+<!--                --><?php //if (!empty($footer_settings['address'])): ?>
+<!--                    <p class="footer__address">--><?//= $footer_settings['address']?><!--</p>-->
+<!--                --><?php //endif; ?>
+
                 <?php if (!empty($footer_settings['address'])): ?>
-                    <p class="footer__address"><?= $footer_settings['address']?></p>
+                    <p class="footer__address"><?= pll__($footer_settings['address'])?></p>
                 <?php endif; ?>
 
             </div>

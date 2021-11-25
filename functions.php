@@ -43,3 +43,5 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_style_scripts');
 
 require get_template_directory() . '/app/Autoloader.php';
 
+$footer_settings = get_field('footer_settings', 'option');
+pll_register_string( 'footer_address', $footer_settings['address'], 'footer_settings' );
