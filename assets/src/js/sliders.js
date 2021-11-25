@@ -35,7 +35,7 @@ function optionsFunc(sliderPref) {
                 return '<span class="' + className + '"></span>';
             },
         },
-        
+
         breakpoints: {
             768: {
                 direction: 'vertical',
