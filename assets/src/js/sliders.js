@@ -107,7 +107,7 @@ if (aboutSlider) {
 
         breakpoints: {
             1024: {
-                centeredSlides: true,
+                slidesPerView: 1,
                 pagination: false,
                 autoplay: {
                     enabled: true,
@@ -125,7 +125,6 @@ if (antibioSlider) {
         loop: true,
         speed: 500,
         slidesPerView: 1,
-        autoHeight: true,
 
         pagination: {
             el: '.antibio-slider__pagination',
