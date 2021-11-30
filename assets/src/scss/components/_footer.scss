@@ -71,6 +71,7 @@
     text-align: center;
 
     @include media-up(md) {
+      text-align: left;
       grid-column-start: 4;
       grid-column-end: 4;
       grid-row-start: 1;
@@ -121,11 +122,16 @@
   }
 
   &__text {
+    position: relative;
     letter-spacing: 0.02em;
 
     @include media-up(md) {
       font-size: 15px;
       margin-bottom: 8px;
+    }
+
+    &-link {
+      text-decoration: underline;
     }
   }
 }
