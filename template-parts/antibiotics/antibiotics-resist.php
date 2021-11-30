@@ -1,6 +1,7 @@
-<?php $antibio_banner = get_field('antibio_banner');?>
-<?php $antibio_resist = get_field('antibio_resist');?>
-<?php if ($antibio_banner): ?>
+<?php
+$antibio_banner = get_field('antibio_banner');
+$antibio_resist = get_field('antibio_resist');
+if ($antibio_banner): ?>
     <section class="antibio-banner">
         <div class="container antibio-banner__wrapper">
             <?php if ($antibio_banner['subtitle']): ?>

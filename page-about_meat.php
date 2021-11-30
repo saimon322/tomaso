@@ -16,7 +16,7 @@ get_header(); ?>
 
     get_template_part('template-parts/products-slider');
 
-    get_template_part('template-parts/section','green', array('n' => '_2'));
+    get_template_part('template-parts/section','green', array('number' => '_2'));
 
     get_template_part('template-parts/where-buy');
 

@@ -1,7 +1,5 @@
 <?php $products = get_field('products');?>
-<?php if ($products):
-    $products['count_desktop_sliders']
-    ?>
+<?php if ($products):?>
     <section class="products_section <?= ($products['count_desktop_sliders'] == 6) ? '' : 'products_section--about-page'?>">
         <div class="products_marker">
             <img src="<?= get_template_directory_uri()?>/assets/dist/img/icons/antibiotic_marker.svg" alt="">
@@ -19,7 +17,7 @@
                 <div class="products_slider swiper-container" data-slidesWeb="<?= $products['count_desktop_sliders'] ? $products['count_desktop_sliders'] : '4'?>">
                     <div class="swiper-wrapper">
                         <?php foreach ($products['slider'] as $product):?>
-                            <div class="products_item swiper-slide">
+                            <a href="<?= $product['slider_link']?>" class="products_item swiper-slide">
 
                                 <?php if ($product['slider_image']): ?>
                                     <div class="products_image">
@@ -31,7 +29,7 @@
                                     <div class="products_name"><?= $product['slider_title']?></div>
                                 <?php endif; ?>
 
-                            </div>
+                            </a>
                         <?php endforeach; ?>
                     </div>
                 </div>

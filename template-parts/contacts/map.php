@@ -1,6 +1,8 @@
-<?php $contacts_data = get_field('contacts_data');?>
-<?php $footer_settings = get_field('footer_settings', 'option');?>
-<?php if ($contacts_data): ?>
+<?php
+$contacts_data = get_field('contacts_data');
+$footer_settings = get_field('footer_settings', 'option');
+
+if ($contacts_data): ?>
     <section class="contacts">
         <div class="container contacts__container">
             <?php if ($contacts_data['map_link']): ?>

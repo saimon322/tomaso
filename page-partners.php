@@ -12,7 +12,7 @@ get_header('', array('header_class' => 'header--black')); ?>
 
     get_template_part('template-parts/section-green');
 
-    get_template_part('template-parts/about', '', array('n' => '_2'));
+    get_template_part('template-parts/about', '', array('number' => '_2'));
 
     get_template_part('template-parts/bottom-banner');
     ?>

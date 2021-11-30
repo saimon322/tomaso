@@ -1,4 +1,4 @@
-<?php $about_us = get_field('about_us'. ($args['n'] ? $args['n'] : '')); ?>
+<?php $about_us = get_field('about_us'. ($args['number'] ? $args['number'] : '')); ?>
 <?php if ($about_us):
     $classes = [];
     if ($about_us['right_image']) {

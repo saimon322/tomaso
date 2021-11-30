@@ -1,8 +1,4 @@
-<?php $attitude = get_field('attitude');
-print_r('<pre>');
-//print_r($attitude);
-print_r('</pre>');
-?>
+<?php $attitude = get_field('attitude');?>
 <?php if ($attitude): ?>
 <section class="attitude">
     <div class="container">

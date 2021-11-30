@@ -1,7 +1,7 @@
-<?php $section_green = get_field('section-green' . ($args['n'] ? $args['n'] : '')); ?>
+<?php $section_green = get_field('section-green' . ($args['number'] ? $args['number'] : '')); ?>
 <?php if ($section_green):
     $classes = '';
-    if ($args['n']) {
+    if ($args['number']) {
         $classes = 'banner-green--small-padding';
     }
     if ($section_green['show_blocks']) {

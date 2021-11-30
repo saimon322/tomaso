@@ -14,7 +14,7 @@
                 <a
                         href="<?= $top_banner['button']['url']?>"
                         class="btn banner__button btn--transparent"
-                    <?= $bottom_banner['button']['target'] ? 'target="'.$bottom_banner['button']['target'].'"' : ' ';?>
+                    <?= $top_banner['button']['target'] ? 'target="'.$top_banner['button']['target'].'"' : ' ';?>
                 >
                     <?= $top_banner['button']['title']?>
                 </a>
