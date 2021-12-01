@@ -38,7 +38,7 @@
                         'walker'         => new HeaderWalker(),
                         ) );
                     ?>
-                </nav><!-- .main-navigation -->
+                </nav>
             <?php endif; ?>
 
             <div class="hamburger">

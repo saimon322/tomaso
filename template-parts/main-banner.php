@@ -14,14 +14,14 @@
                 <a
                         href="<?= $top_banner['button']['url']?>"
                         class="btn banner__button btn--transparent"
-                    <?= $bottom_banner['button']['target'] ? 'target="'.$bottom_banner['button']['target'].'"' : ' ';?>
+                    <?= $top_banner['button']['target'] ? 'target="'.$top_banner['button']['target'].'"' : ' ';?>
                 >
                     <?= $top_banner['button']['title']?>
                 </a>
             <?php endif; ?>
         </div>
         <?php if ($top_banner['background']): ?>
-            <img src="<?= $top_banner['background']?>" class="banner__bg" alt="">
+            <img src="<?= $top_banner['background']?>" data-no-lazy="" class="banner__bg" alt="">
         <?php endif; ?>
     </section>
 <?php endif; ?>

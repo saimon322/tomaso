@@ -2,7 +2,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
-            <?php if ( has_nav_menu( 'header-menu' ) ) : ?>
+            <?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
                 <div class="footer__menu">
                     <nav class="footer-nav">
                         <?php
@@ -28,13 +28,13 @@
                     <?php endif; ?>
                 </div>
 
-<!--                --><?php //if (!empty($footer_settings['address'])): ?>
-<!--                    <p class="footer__address">--><?//= $footer_settings['address']?><!--</p>-->
-<!--                --><?php //endif; ?>
-
-                <?php if (!empty($footer_settings['address'])): ?>
-                    <p class="footer__address"><?= pll__($footer_settings['address'])?></p>
-                <?php endif; ?>
+                <?php if (!empty($footer_settings['address'])):
+                    if (function_exists('pll__')) {
+                        echo '<p class="footer__address">'.pll__($footer_settings['address']).'</p>';
+                    } else {
+                        echo '<p class="footer__address">'.$footer_settings['address'].'</p>';
+                    }
+                endif; ?>
 
             </div>
 
