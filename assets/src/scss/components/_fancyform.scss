@@ -19,7 +19,8 @@
         height: calc(100vh - 61px);
         height: calc(var(--vh, 100vh) * 100 - 61px);
         @include media-up(lg) {
-            height: auto;
+            height: 85vh;
+            height: calc(var(--vh, 85vh) * 80);
             max-width: calc(80vw - 156px);
         }
     }
@@ -50,4 +51,9 @@
         }
     }
 
+}
+
+.fancybox__content {
+    height: 85vh;
+    overflow-y: auto;
 }
