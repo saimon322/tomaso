@@ -21,7 +21,7 @@
             <?php endif; ?>
         </div>
         <?php if ($top_banner['background']): ?>
-            <img src="<?= $top_banner['background']?>" class="banner__bg" alt="">
+            <img src="<?= $top_banner['background']?>" data-no-lazy="" class="banner__bg" alt="">
         <?php endif; ?>
     </section>
 <?php endif; ?>
