@@ -78,9 +78,10 @@
 
                     <?php endforeach; ?>
                 </div>
-                <div class="fancymaps__pagination"></div>
             </div>
         <?php endif;?>
+
+        <div class="fancymaps__pagination"></div>
 
     </div>
 

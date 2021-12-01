@@ -20,7 +20,7 @@
                 <div class="about--slider__pagination"></div>
                 <div class="swiper-wrapper">
                     <?php foreach ($about_slider['slider'] as $key => $slide): ?>
-                        <div class="container about--slider__slide swiper-slide">
+                        <div class="about--slider__slide swiper-slide">
                             <div class="about--slider__slide-wrapper container">
 
                                 <?php if ($slide['image']): ?>

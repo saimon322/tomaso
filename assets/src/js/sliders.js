@@ -262,7 +262,6 @@ if (historySlider) {
     const years = document.querySelectorAll('.history-slider__subheader');
     const headers = document.querySelectorAll('.history-slider__header');
     const histories = new Swiper(historySlider, {
-        loop: true,
         slidesPerView: 'auto',
         pagination: {
             el: '.history-slider__pagination',
