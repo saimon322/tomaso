@@ -10,7 +10,8 @@
     @include media-up(lg) {
         top: auto;
         width: 100%;
-        height: auto;
+        height: 85vh;
+        overflow-y: auto;
         max-width: 80vw;
     }
 
@@ -33,6 +34,10 @@
         @include media-up(lg) {
             margin-bottom: 32px;
         }
+    }
+
+    &__maps {
+        min-height: 250px;
     }
 
     &__wrapper {
