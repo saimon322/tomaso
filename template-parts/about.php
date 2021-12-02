@@ -13,8 +13,20 @@
             'section' => ' about--content-text',
         ];
     }
+    if ($args['section_class'] == 'about--green-circle') {
+        $classes = [
+            'section' => ' about--green-circle',
+        ];
+    }
     ?>
     <section class="about<?= $classes['section']?>">
+
+        <?php if ($args['section_class'] == 'about--green-circle') {?>
+            <div class="products_marker about__green-circle">
+                <img src="<?= get_template_directory_uri()?>/assets/dist/img/icons/antibiotic_marker.svg" alt="">
+            </div>
+        <?php }?>
+
         <?php if ($about_us['titles_top']): ?>
             <div class="about_head">
                 <div class="container">
