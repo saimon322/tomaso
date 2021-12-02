@@ -1,27 +1,24 @@
 .footer {
   background-image: url("../img/icons/lines_bg.svg");
   background-color: $color-black;
+  color: rgba(242, 241, 240, 0.6);
 
-  p {
-    color: rgba(242, 241, 240, 0.6);
-
-    a {
-      color: $color-white-1;
-    }
+  a {
+    color: $color-white-1;
   }
 
-    &__wrapper {
-      @include media-up(md) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 80px;
-        padding-top: 50px;
-        padding-bottom: 30px;
-      }
+  &__wrapper {
+    @include media-up(md) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 80px;
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
 
-      @include media-up(lg) {
-        grid-column-gap: 128px;
-      }
+    @include media-up(lg) {
+      grid-column-gap: 128px;
+    }
   }
 
   &__menu {
@@ -39,23 +36,24 @@
   &-nav__list {
     width: 100%;
     text-align: center;
+
     @include media-up(md) {
       display: grid;
       grid-template-columns: repeat(2, auto);
       grid-column-gap: 50px;
       text-align: left;
     }
+
     @include media-up(lg) {
       grid-column-gap: 128px;
     }
 
-      li:not(:last-child) {
+    li:not(:last-child) {
       margin-bottom: 20px;
     }
 
     li {
       a {
-        color: $color-white-1;
         opacity: 0.6;
         transition: opacity .3s;
 
@@ -81,6 +79,7 @@
 
   &__links {
     margin-bottom: 10px;
+
     a {
       color: $color-white-1;
       margin-bottom: 10px;
@@ -115,7 +114,7 @@
       height: 58px;
     }
 
-      svg {
+    svg {
       width: 100%;
       height: 100%;
     }
@@ -130,8 +129,12 @@
       margin-bottom: 8px;
     }
 
-    &-link {
+    a {
       text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
