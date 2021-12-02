@@ -8,7 +8,7 @@ get_header(); ?>
     <?php
     get_template_part('template-parts/main-banner');
 
-    get_template_part('template-parts/about');
+    get_template_part('template-parts/about','', array('section_class' => 'about--green-circle'));
 
     get_template_part('template-parts/antibiotics/antibiotics-slider');
 
