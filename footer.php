@@ -45,13 +45,13 @@
                     </svg>
                 </a>
                 <?php if (!empty($footer_settings['copyright'])): ?>
-                    <p class="footer__text"><?= $footer_settings['copyright']?></p>
+                    <div class="footer__text"><?= $footer_settings['copyright']?></div>
                 <?php endif; ?>
                 <?php if (!empty($footer_settings['rights'])): ?>
-                    <p class="footer__text"><?= $footer_settings['rights']?></p>
+                    <div class="footer__text"><?= $footer_settings['rights']?></div>
                 <?php endif; ?>
                 <?php if (!empty($footer_settings['designed'])): ?>
-                    <p class="footer__text"><?= $footer_settings['designed']?></p>
+                    <div class="footer__text"><?= $footer_settings['designed']?></div>
                 <?php endif; ?>
             </div>
         </div>
